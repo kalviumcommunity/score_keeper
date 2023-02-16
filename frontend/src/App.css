@@ -69,7 +69,7 @@ a {
 
 .buttons{
   display: flex;
-  justify-content:space-around;
+  justify-content:space-evenly;
   align-items: center;
   margin-top: 7%;
   background-color: #d9d9d9;
@@ -182,4 +182,110 @@ a {
   width: 40%;
   border: solid black;
   border-radius: 10%;
+}
+
+
+/* Game-Page */
+
+.game-page{
+  display: flex;
+  justify-content: center;
+}
+
+.gamepage-content{
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  width: 40%;
+  border: solid black;
+  border-radius: 10%;
+}
+
+.login{
+	display: inline-block;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color:aqua;
+	color: black;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+  transition: .4s;
+}
+.login:hover{
+	background-color: black;
+	border: 2px solid aqua;
+  color: white;
+	cursor: pointer;
+}
+.login{
+	display: inline-block;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color:aqua;
+	color: black;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+  transition: .4s;
+}
+.login:hover{
+	background-color: black;
+	border: 2px solid aqua;
+  color: white;
+	cursor: pointer;
+}
+.record-game{
+	display: inline-block;
+	outline: none;
+	border: 2px solid black;
+	padding: 10px 30px;
+	border-radius: 35px;
+	background-color:aqua;
+	color: black;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+  transition: .4s;
+  width: 83%;
+  height: 40%;
+  margin-top: 2.2%;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.record-game:hover{
+	background-color: black;
+	border: 2px solid aqua;
+  color: white;
+	cursor: pointer;
+}
+.view-game{
+	display: inline-block;
+	outline: none;
+	border: 2px solid black;
+	padding: 10px 30px;
+	border-radius: 35px;
+	background-color:aqua;
+	color: black;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+  transition: .4s;
+  width: 83%;
+  height: 40%;
+  margin-top: 2.2%;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.view-game:hover{
+	background-color: black;
+	border: 2px solid aqua;
+  color: white;
+	cursor: pointer;
 }
