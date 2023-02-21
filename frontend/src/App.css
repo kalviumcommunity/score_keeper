@@ -1,11 +1,33 @@
-*{
+/* *{
   background-color: white;
-}
+} */
 
 a {
   background-color: transparent;
 }
 
+.content{
+  background-color: transparent;
+  margin-top: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.er{
+  font-size: 300%;
+}
+
+.erer{
+  font-size: 250%;
+  margin-top: -2%;
+}
+
+.ererer{
+  font-size: 200%;
+  margin-top: -2%;
+}
 
 /* NAVBAR */
 
@@ -259,7 +281,7 @@ a {
   height: 40%;
   margin-top: 2.2%;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: xx-large;
 }
 .record-game:hover{
 	background-color: black;
@@ -281,11 +303,139 @@ a {
   height: 40%;
   margin-top: 2.2%;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: xx-large;
 }
 .view-game:hover{
 	background-color: black;
 	border: 2px solid aqua;
   color: white;
 	cursor: pointer;
+}
+
+/* New-Game */
+
+.gametitle{
+  text-align: center;
+}
+
+.main-part-up{
+  margin-top: -2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-1{
+  background-color: aqua;
+  width: 8%;
+  text-align: left;
+  font-size: 5rem;
+  border-right: 6px solid black;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.score-2{
+  width: 8%;
+  background-color: aqua;
+  text-align: right;
+  font-size: 5rem;
+  border-left: 6px solid black;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.b-court{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+}
+
+.main-part-down{
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-evenly;
+}
+
+.p-1-details{
+  display: flex;
+  background-color: aqua;
+  flex-direction: column;
+  align-items: right;
+  width: 15%;
+  height: 20%;
+  border: solid black;
+}
+
+.p-1-details-name{
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: x-large;
+}
+
+.p-1-details-score{
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: x-large;
+}
+
+.functions{
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.p-1-add{
+  border: solid black;
+  background-color: aqua;
+  font-size: x-large;
+  margin: 1% 1% 1% 1%;
+}
+.p-2-add{
+  border: solid black;
+  background-color: aqua;
+  font-size: x-large;
+  margin: 1% 1% 1% 1%;
+}
+
+.undo{
+  border: solid black;
+  background-color: aqua;
+  font-size: large;
+  margin: 1% 1% 1% 1%;
+}
+
+.swap{
+  border: solid black;
+  background-color: aqua;
+  font-size: large;
+  margin: 1% 1% 1% 1%;
+}
+
+
+
+.p-2-details{
+  display: flex;
+  background-color: aqua;
+  flex-direction: column;
+  align-items: right;
+  width: 15%;
+  height: 20%;
+  border: solid black;
+}
+
+.p-2-details-name{
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: x-large;
+}
+
+.p-2-details-score{
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: x-large;
 }
