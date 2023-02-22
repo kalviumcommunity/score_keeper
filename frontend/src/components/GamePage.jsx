@@ -9,8 +9,8 @@ function GamePage() {
             <img className='pic' src={badminton} alt="react-app" />
         </div>
         <div className="gamepage-content">
-            <Link to={'/newgame'}><div className='record-game'>Record Game</div></Link>
-            <div className='view-game'>View Old Game</div>
+            <Link className='record-game' to={'/newgame'}>Record Game</Link>
+            <Link className='view-game' to={'/dvsdvsdvs'}>View Old Game</Link>
         </div>
     </div>
   )
