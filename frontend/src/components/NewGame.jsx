@@ -1,35 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Court from '../Pictures/court.png'
+import Button from './Button';
+import TextField from '@mui/material/TextField'
 
 function NewGame() {
+
+    const [count1, setCount1] = useState(0);
+
+    let incrementCountP1 = () => {
+        setCount1(count1 + 1);
+    };
+    
+
+    let undoCount1 = () => {
+        setCount1(count1 - 1);
+    };
+
+    const [count2, setCount2] = useState(0);
+    let incrementCountP2 = () => {
+        setCount2(count2 + 1);
+    };
+    let undoCount2 = () => {
+        
+        setCount2(count2 - 1);
+    };
+    
+
   return (
     <div className='newgame-page'>
-        <h1 className='gametitle'>This is the Game Title !!</h1>
+        <TextField className='gametitle' id="outlined-basic" label="This is the Game Title !!" variant="outlined" />
         <div className='main-part-up'>
-            <div className='score-1'>00</div>
+            <div className='score-1'>{count1}</div>
             <div>
                 <img className='b-court' src={Court} alt="Badminton-Court" />
             </div>
-            <div className='score-2'>00</div>
+            <div className='score-2'>{count2}</div>
         </div>
         <div className='main-part-down'>
             <div className='p-1-details'>
-                <div className='p-1-details-name'>Player 1</div>
-                <div className='p-1-details-score'>0</div>
+            <TextField className='p-1-details-name' id="standard-basic" label="Player 1" variant="standard" />
+                <div className='p-1-details-score'>{count1}</div>
             </div>
             <div className='functions'>
-                <buttton className='p-1-add'>+1</buttton>
-                <buttton className='undo'>Undo last move</buttton>
-                <buttton className='swap'>swap sides</buttton>
-                <buttton className='p-2-add'>+1</buttton>
+                <Button className='p-1-add' title={'+1'} action={incrementCountP1}/>
+                <Button title={'undo1'} action={undoCount1}/>
+                <Button title={'undo2'} action={undoCount2}/>
+                <Button title={'+1'} action={incrementCountP2}/>
             </div>
             <div className='p-2-details'>
-                <div className='p-2-details-name'>Player 2</div>
-                <div className='p-2-details-score'>0</div>
+            <TextField className='p-2-details-name' id="standard-basic" label="Player 2" variant="standard" />
+                <div className='p-2-details-score'>{count2}</div>
             </div>
         </div>
     </div>
   )
 }
-
 export default NewGame

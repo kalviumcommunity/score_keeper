@@ -2,8 +2,13 @@
   background-color: white;
 } */
 
+* {
+  text-decoration: none;
+}
+
 a {
   background-color: transparent;
+  color: black;
 }
 
 .content{
@@ -314,8 +319,18 @@ a {
 
 /* New-Game */
 
+.newgame-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
 .gametitle{
-  text-align: center;
+  width: 40%;
+  height: 10%;
+  border: solid black;
 }
 
 .main-part-up{
@@ -323,12 +338,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .score-1{
   background-color: aqua;
   width: 8%;
-  text-align: left;
+  text-align: center;
   font-size: 5rem;
   border-right: 6px solid black;
   border-top-right-radius: 30px;
@@ -338,7 +354,7 @@ a {
 .score-2{
   width: 8%;
   background-color: aqua;
-  text-align: right;
+  text-align: center;
   font-size: 5rem;
   border-left: 6px solid black;
   border-top-left-radius: 30px;
@@ -353,9 +369,10 @@ a {
 }
 
 .main-part-down{
+  width: 80%;
   display: flex;
   margin-top: 5%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .p-1-details{
@@ -388,27 +405,7 @@ a {
   justify-content: space-between;
 }
 
-.p-1-add{
-  border: solid black;
-  background-color: aqua;
-  font-size: x-large;
-  margin: 1% 1% 1% 1%;
-}
-.p-2-add{
-  border: solid black;
-  background-color: aqua;
-  font-size: x-large;
-  margin: 1% 1% 1% 1%;
-}
-
 .undo{
-  border: solid black;
-  background-color: aqua;
-  font-size: large;
-  margin: 1% 1% 1% 1%;
-}
-
-.swap{
   border: solid black;
   background-color: aqua;
   font-size: large;

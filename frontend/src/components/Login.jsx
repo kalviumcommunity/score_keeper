@@ -1,5 +1,6 @@
 import React from 'react'
 import badminton from "../Pictures/pngegg.png"
+// import TextField from '@mui/material/TextField'
 
 function Login() {
   return (
@@ -12,6 +13,7 @@ function Login() {
             <input className='email' type="text" placeholder='Enter your E-mail Id' />
             <input className='password' type="password" placeholder='Enter your Password' />
             <button className='login'>Login</button>
+            {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
         </div>
     </div>
   )
