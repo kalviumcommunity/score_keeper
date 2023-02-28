@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 function NewGame() {
 
+    // Logic 
+
     const [count1, setCount1] = useState(0);
     const navigate = useNavigate();
 
@@ -34,8 +36,12 @@ function NewGame() {
     }
 
   return (
+
     <div className='newgame-page'>
-        <TextField className='gametitle' id="outlined-basic" label="This is the Game Title !!" variant="outlined" />
+
+        <>
+        <input id='gametitle-re' type="text" placeholder="This is the Game Title !!" />
+        </>
         <div className='main-part-up'>
             <div className='score-1'>{count1}</div>
             <div>

@@ -340,13 +340,12 @@ span{
   align-items: center;
 }
 
-.gametitle{
-  margin-top: 10%;
-  width: 40%;
-  height: 10%;
-  border: solid black;
-}
 
+#gametitle-re{
+  margin-top: 1rem;
+  width: 46%;
+  height: 2rem;
+}
 .main-part-up{
   margin-top: 2%;
   display: flex;
