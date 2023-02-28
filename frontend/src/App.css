@@ -1,6 +1,11 @@
-/* *{
-  background-color: white;
-} */
+*{
+  background-color: #252424;
+}
+
+
+#white-text{
+  color: white !important;
+}
 
 * {
   text-decoration: none;
@@ -38,17 +43,26 @@ a {
 
 .navbar{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
-  background-color: aqua;
   border: solid black; 
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
+  background-color: black;
+  border-bottom: solid white;
+  border-radius: 5px;
+  position: relative;
 }
 
 .app-name{
-  text-align: center;
-  background-color: aqua;
+  text-align: left;
+  color: white;
+  background-color: black;
+  margin-left: 5%;
+}
+
+span{
+  color: #f9004d;
+  background-color: transparent;
 }
 
 /* HOME */
@@ -56,50 +70,60 @@ a {
 .home{
   display: flex;
   justify-content: center;
+  border-bottom: solid white;
 }
 
 .picture{
-  margin-top: 2%;
+  margin-top: 1%;
   width: 50%;
 }
 
 .pic{
   width: 100%;
   height: auto;
+  margin-left: -5%;
 }
 
 .home-content{
-  margin-top: 10%;
+  margin-top: 8%;
   margin-bottom: 10%;
   display: flex;
   flex-direction: column;
-  background-color: #d9d9d9;
   width: 40%;
-  border: solid black;
-  border-radius: 10%;
 }
 
 .heading{
   margin-top: 10%;
-  text-align: center;
-  font-size: 3rem;
-  background-color: #d9d9d9;
+  text-align: left;
+  font-size: -webkit-xxx-large;
+  background-color: transparent;
+  color: white;
 }
+
+.sub-heading{
+  margin-top: -3%;
+  text-align: left;
+  font-size: x-large;
+  background-color: transparent;
+  color: white;
+}
+
 
 .heading-content{
   text-align: justify;
   font-size: large;
-  margin-left: 4.5%;
   margin-right: 4.5%;
-  background-color: #d9d9d9;
+  background-color: transparent;
+  color: #fcfc;
+  margin-top: -2%;
 }
 
 .buttons{
   display: flex;
-  justify-content:space-evenly;
+  justify-content: left;
   align-items: center;
-  margin-top: 7%;
-  background-color: #d9d9d9;
+  margin-top: 4%;
+  background-color: transparent;
 }
 
 .login{
@@ -108,35 +132,59 @@ a {
 	border: 1px solid black;
 	padding: 10px 30px;
 	border-radius: 30px;
-	background-color:aqua;
+	background-color: #f9004d;
+	color: black;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+  transition: .4s;
+  font-size: large;
+  margin-right: 20px;
+}
+.login:hover{
+	background-color: black;
+	border: 2px solid #f9004d;
+  color: white;
+	cursor: pointer;
+}
+
+.skip{
+	display: inline-block;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: #f9004d;
 	color: black;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 	top: 6px;
 	right: 6px;
   transition: .4s;
 }
-.login:hover{
+.skip:hover{
 	background-color: black;
-	border: 2px solid aqua;
+	border: 2px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
+
 .signup{
 	display: inline-block;
 	outline: none;
 	border: 1px solid black;
 	padding: 10px 30px;
 	border-radius: 30px;
-	background-color:aqua;
+	background-color:#f9004d;
 	color: black;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 	top: 6px;
 	right: 6px;
   transition: .4s;
+  font-size: large;
 }
 .signup:hover{
 	background-color: black;
-	border: 2px solid aqua;
+	border: 2px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
@@ -157,8 +205,9 @@ a {
   flex-direction: column;
   background-color: #d9d9d9;
   width: 40%;
-  border: solid black;
+  border: solid #f9004d;
   border-radius: 10%;
+  
 }
 
 .login-heading{
@@ -174,6 +223,7 @@ a {
   height: 6%;
   margin-bottom: 1%;
   border: solid black;
+  color: white;
 }
 
 .password{
@@ -182,6 +232,7 @@ a {
   margin-top: 1%;
   border: solid black;
   margin-bottom: 8%;
+  color: white;
 }
 
 /* Sign-Up */
@@ -202,13 +253,14 @@ a {
   display: flex;
   align-items: center;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 13%;
   display: flex;
   flex-direction: column;
   background-color: #d9d9d9;
   width: 40%;
-  border: solid black;
+  border: solid #f9004d;
   border-radius: 10%;
+  
 }
 
 
@@ -222,7 +274,7 @@ a {
 .gamepage-content{
   display: flex;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 15%;
   margin-bottom: 10%;
   display: flex;
   flex-direction: column;
@@ -232,51 +284,13 @@ a {
   border-radius: 10%;
 }
 
-.login{
-	display: inline-block;
-	outline: none;
-	border: 1px solid black;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color:aqua;
-	color: black;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px;
-  transition: .4s;
-}
-.login:hover{
-	background-color: black;
-	border: 2px solid aqua;
-  color: white;
-	cursor: pointer;
-}
-.login{
-	display: inline-block;
-	outline: none;
-	border: 1px solid black;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color:aqua;
-	color: black;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px;
-  transition: .4s;
-}
-.login:hover{
-	background-color: black;
-	border: 2px solid aqua;
-  color: white;
-	cursor: pointer;
-}
 .record-game{
 	display: inline-block;
 	outline: none;
 	border: 2px solid black;
 	padding: 10px 30px;
 	border-radius: 35px;
-	background-color:aqua;
+	background-color:#f9004d;
 	color: black;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 	top: 6px;
@@ -290,7 +304,7 @@ a {
 }
 .record-game:hover{
 	background-color: black;
-	border: 2px solid aqua;
+	border: 2px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
@@ -300,7 +314,7 @@ a {
 	border: 2px solid black;
 	padding: 10px 30px;
 	border-radius: 35px;
-	background-color:aqua;
+	background-color:#f9004d;
 	color: black;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
   transition: .4s;
@@ -312,7 +326,7 @@ a {
 }
 .view-game:hover{
 	background-color: black;
-	border: 2px solid aqua;
+	border: 2px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
@@ -324,17 +338,17 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2%;
 }
 
 .gametitle{
+  margin-top: 10%;
   width: 40%;
   height: 10%;
   border: solid black;
 }
 
 .main-part-up{
-  margin-top: -2%;
+  margin-top: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -342,7 +356,7 @@ a {
 }
 
 .score-1{
-  background-color: aqua;
+  background-color: #f9004d;
   width: 8%;
   text-align: center;
   font-size: 5rem;
@@ -353,7 +367,7 @@ a {
 
 .score-2{
   width: 8%;
-  background-color: aqua;
+  background-color: #f9004d;
   text-align: center;
   font-size: 5rem;
   border-left: 6px solid black;
@@ -377,7 +391,7 @@ a {
 
 .p-1-details{
   display: flex;
-  background-color: aqua;
+  background-color: #f9004d;
   flex-direction: column;
   align-items: right;
   width: 15%;
@@ -396,6 +410,7 @@ a {
   margin-top: 2%;
   margin-bottom: 5%;
   font-size: x-large;
+  background-color: transparent;
 }
 
 .functions{
@@ -407,7 +422,7 @@ a {
 
 .undo{
   border: solid black;
-  background-color: aqua;
+  background-color: #f9004d;
   font-size: large;
   margin: 1% 1% 1% 1%;
 }
@@ -416,7 +431,7 @@ a {
 
 .p-2-details{
   display: flex;
-  background-color: aqua;
+  background-color: #f9004d;
   flex-direction: column;
   align-items: right;
   width: 15%;
@@ -435,6 +450,7 @@ a {
   margin-top: 2%;
   margin-bottom: 5%;
   font-size: x-large;
+  background-color: transparent;
 }
 
 
@@ -473,4 +489,8 @@ a {
 .win-text{
   text-align: center;
   margin-top: 2%;
+}
+
+input{
+  color: white;
 }

@@ -45,7 +45,7 @@ function NewGame() {
         </div>
         <div className='main-part-down'>
             <div className='p-1-details'>
-                <TextField className='p-1-details-name' id="standard-basic" label="Player 1" variant="standard" />
+                <TextField className='p-1-details-name' id="white-text" label="Player 1" variant="standard" />
                 <div className='p-1-details-score'>{count1}</div>
             </div>
             <div className='functions'>
@@ -55,7 +55,7 @@ function NewGame() {
                 <Button title={'+1'} action={incrementCountP2}/>
             </div>
             <div className='p-2-details'>
-                <TextField className='p-2-details-name' id="standard-basic" label="Player 2" variant="standard" />
+                <TextField className='p-2-details-name' id="white-text" label="Player 2" variant="standard" />
                 <div className='p-2-details-score'>{count2}</div>
             </div>
         </div>
