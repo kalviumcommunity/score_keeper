@@ -7,6 +7,7 @@ import SignUp from './components/SignUp'
 import GamePage from './components/GamePage'
 import ErrorPage from './components/ErrorPage'
 import NewGame from './components/NewGame'
+import SemiResult from './components/SemiResult'
 import "./App.css"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/gamepage' element={<GamePage/>}/>
         <Route path='/newgame' element={<NewGame/>}/>
         <Route path='*' element={<ErrorPage />}/>
+        <Route path='/semiresult' element={<SemiResult />}/>
       </Routes>
     </>
   )

@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import Court from '../Pictures/court.png'
 import Button from './Button';
 import TextField from '@mui/material/TextField'
+// import SemiResult from './SemiResult';
+import { useNavigate } from 'react-router-dom';
 
 function NewGame() {
 
     const [count1, setCount1] = useState(0);
+    const navigate = useNavigate();
 
     let incrementCountP1 = () => {
         setCount1(count1 + 1);
@@ -24,7 +27,11 @@ function NewGame() {
         
         setCount2(count2 - 1);
     };
-    
+
+    if(count1 >= 21)
+    {
+        navigate('/semiresult')
+    }
 
   return (
     <div className='newgame-page'>
@@ -38,7 +45,7 @@ function NewGame() {
         </div>
         <div className='main-part-down'>
             <div className='p-1-details'>
-            <TextField className='p-1-details-name' id="standard-basic" label="Player 1" variant="standard" />
+                <TextField className='p-1-details-name' id="white-text" label="Player 1" variant="standard" />
                 <div className='p-1-details-score'>{count1}</div>
             </div>
             <div className='functions'>
@@ -48,7 +55,7 @@ function NewGame() {
                 <Button title={'+1'} action={incrementCountP2}/>
             </div>
             <div className='p-2-details'>
-            <TextField className='p-2-details-name' id="standard-basic" label="Player 2" variant="standard" />
+                <TextField className='p-2-details-name' id="white-text" label="Player 2" variant="standard" />
                 <div className='p-2-details-score'>{count2}</div>
             </div>
         </div>
