@@ -106,6 +106,8 @@ span{
   font-size: x-large;
   background-color: transparent;
   color: white;
+  /* box-shadow: 0px 0px 90px #000, 0px 0px 5px #858585; */
+  width: fit-content;
 }
 
 
@@ -163,7 +165,7 @@ span{
 }
 .skip:hover{
 	background-color: black;
-	border: 2px solid #f9004d;
+	border: 1px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
@@ -175,16 +177,16 @@ span{
 	padding: 10px 30px;
 	border-radius: 30px;
 	background-color:#f9004d;
-	color: black;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
 	top: 6px;
 	right: 6px;
   transition: .4s;
   font-size: large;
 }
 .signup:hover{
-	background-color: black;
-	border: 2px solid #f9004d;
+	background-color: transparent;
+	border: 1px solid #f9004d;
   color: white;
 	cursor: pointer;
 }
