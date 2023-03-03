@@ -10,8 +10,8 @@ function NewGame() {
     const [inputValue, setInputValue] = useState("");
     // console.log(inputValue);
 
-    const [P1Value, setP1Value] = useState("");
-    const [P2Value, setP2Value] = useState("");
+    const [Player1Score, setPlayer1Score] = useState("");
+    const [Player2Score, setPlayer2Score] = useState("");
 
     // Update session storage whenever the input value changes
     useEffect(() => {
@@ -19,12 +19,12 @@ function NewGame() {
     }, [inputValue]);
 
     useEffect(() => {
-        sessionStorage.setItem("P1Value", P1Value);
-    }, [P1Value]);
+        sessionStorage.setItem("Player1Score", Player1Score);
+    }, [Player1Score]);
 
     useEffect(() => {
-        sessionStorage.setItem("P2Value", P2Value);
-    }, [P2Value]);
+        sessionStorage.setItem("Player2Score", Player2Score);
+    }, [Player2Score]);
 
 
 
@@ -34,11 +34,11 @@ function NewGame() {
     };
 
     const p1Change = (event) => {
-        setP1Value(event.target.value);
+        setPlayer1Score(event.target.value);
     };
 
     const p2Change = (event) => {
-        setP2Value(event.target.value);
+        setPlayer2Score(event.target.value);
     };
 
     // Logic
@@ -97,7 +97,7 @@ function NewGame() {
                         className="p-1-details-name"
                         id="white-text"
                         placeholder="Player 1"
-                        value={P1Value}
+                        value={Player1Score}
                         onChange={p1Change}
                     />
                     <div className="p-1-details-score">{count1}</div>
@@ -113,7 +113,7 @@ function NewGame() {
                         className="p-2-details-name"
                         id="white-text"
                         placeholder="Player 2"
-                        value={P2Value}
+                        value={Player2Score}
                         onChange={p2Change}
                     />
                     <div className="p-2-details-score">{count2}</div>
