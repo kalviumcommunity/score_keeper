@@ -13,7 +13,7 @@
 
 a {
   background-color: transparent;
-  color: black;
+  color: white;
 }
 
 .content{
@@ -63,6 +63,26 @@ a {
 span{
   color: #f9004d;
   background-color: transparent;
+}
+
+.nav-content{
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  color: white;
+  background-color: transparent;
+}
+
+.nav-con{
+  background-color: transparent;
+  font-size: medium;
+  font-weight: bold;
+  transition: 1s;
+}
+
+.nav-con:hover{
+  color: #f9004d;
+  cursor: pointer;
 }
 
 /* HOME */
@@ -276,7 +296,7 @@ span{
 .gamepage-content{
   display: flex;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: 10%;
   display: flex;
   flex-direction: column;
@@ -340,13 +360,15 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: xx-large;
 }
-
 
 #gametitle-re{
   margin-top: 1rem;
-  width: 46%;
-  height: 2rem;
+  width: 40%;
+  border: solid white;
+  text-align: center;
+  font-size: x-large;
 }
 .main-part-up{
   margin-top: 2%;
@@ -380,7 +402,7 @@ span{
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 }
 
 .main-part-down{
@@ -401,9 +423,11 @@ span{
 }
 
 .p-1-details-name{
-  margin-top: 5%;
-  margin-left: 5%;
-  font-size: x-large;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: large;
+  background-color: transparent;
 }
 
 .p-1-details-score{
@@ -441,9 +465,11 @@ span{
 }
 
 .p-2-details-name{
-  margin-top: 5%;
-  margin-left: 5%;
-  font-size: x-large;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: large;
+  background-color: transparent;
 }
 
 .p-2-details-score{
@@ -457,9 +483,12 @@ span{
 
 /* SemiResult Page */
 
-.gametitle-sm{
-  width: 40%;
-  margin-bottom: 1%;
+.title-sr{
+  width: 80%;
+  margin-bottom: 5%;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
 }
 
 
@@ -490,6 +519,7 @@ span{
 .win-text{
   text-align: center;
   margin-top: 2%;
+  font-size: xx-large;
 }
 
 input{
