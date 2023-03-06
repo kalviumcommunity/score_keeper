@@ -3,6 +3,7 @@ import Court from "../Pictures/court.png";
 import Button from "./Button";
 // import SemiResult from './SemiResult';
 import { useNavigate } from "react-router-dom";
+// import { useStackState } from "rooks"
 
 function NewGame() {
     //title of game
@@ -10,8 +11,9 @@ function NewGame() {
     const [inputValue, setInputValue] = useState("");
     // console.log(inputValue);
 
-    const [Player1Score, setPlayer1Score] = useState("");
-    const [Player2Score, setPlayer2Score] = useState("");
+    const [Player1Name, setPlayer1Name] = useState("");
+    const [Player2Name, setPlayer2Name] = useState("");
+    const [gameActions, setGameActions] = useState([]);
 
     // Update session storage whenever the input value changes
     useEffect(() => {
@@ -19,12 +21,12 @@ function NewGame() {
     }, [inputValue]);
 
     useEffect(() => {
-        sessionStorage.setItem("Player1Score", Player1Score);
-    }, [Player1Score]);
+        sessionStorage.setItem("Player1Name", Player1Name);
+    }, [Player1Name]);
 
     useEffect(() => {
-        sessionStorage.setItem("Player2Score", Player2Score);
-    }, [Player2Score]);
+        sessionStorage.setItem("Player2Name", Player2Name);
+    }, [Player2Name]);
 
 
 
@@ -34,11 +36,11 @@ function NewGame() {
     };
 
     const p1Change = (event) => {
-        setPlayer1Score(event.target.value);
+        setPlayer1Name(event.target.value);
     };
 
     const p2Change = (event) => {
-        setPlayer2Score(event.target.value);
+        setPlayer2Name(event.target.value);
     };
 
     // Logic
@@ -49,19 +51,21 @@ function NewGame() {
     const navigate = useNavigate();
 
     let incrementCountP1 = () => {
+            const newActions = [...gameActions,{
+                action:'increment',
+                player:'player1'
+            }]
+            setGameActions(newActions)
         setCount1(count1 + 1);
-        // count1 >=0;
-    };
-
-    let undoCount1 = () => {
-        setCount1(count1 - 1);
     };
 
     let incrementCountP2 = () => {
+        const newActions = [...gameActions,{
+            action:'increment',
+            player:'player2'
+        }]
+        setGameActions(newActions)
         setCount2(count2 + 1);
-    };
-    let undoCount2 = () => {
-        setCount2(count2 - 1);
     };
 
     if (count1 >= 21) {
@@ -71,6 +75,24 @@ function NewGame() {
     if (count2 >= 21) {
         navigate("/semiresult");
     }
+
+    // undo logic
+
+    let undo = () => {
+        const newActions = [...gameActions]
+        const latestAction = newActions.pop()
+        setGameActions(newActions)
+        if(latestAction.player === "player1"){
+            setCount1(count1 - 1)
+        }
+        else{
+            setCount2(count2 - 1)
+        }
+        console.log(count1, count2)
+    };
+
+    
+
 
 
     return (
@@ -97,15 +119,14 @@ function NewGame() {
                         className="p-1-details-name"
                         id="white-text"
                         placeholder="Player 1"
-                        value={Player1Score}
+                        value={Player1Name}
                         onChange={p1Change}
                     />
                     <div className="p-1-details-score">{count1}</div>
                 </div>
                 <div className="functions">
                     <Button className="p-1-add" title={"+1"} action={incrementCountP1} />
-                    <Button title={"undo1"} action={undoCount1} />
-                    <Button title={"undo2"} action={undoCount2} />
+                    <Button title={"undo"} action={undo} />
                     <Button title={"+1"} action={incrementCountP2} />
                 </div>
                 <div className="p-2-details">
@@ -113,7 +134,7 @@ function NewGame() {
                         className="p-2-details-name"
                         id="white-text"
                         placeholder="Player 2"
-                        value={Player2Score}
+                        value={Player2Name}
                         onChange={p2Change}
                     />
                     <div className="p-2-details-score">{count2}</div>

@@ -3,8 +3,8 @@ import Court from "../Pictures/court.png";
 
 function SemiResult() {
   let Title = sessionStorage.getItem("inputValue");
-  let P1Value = sessionStorage.getItem("P1Value");
-  let P2Value = sessionStorage.getItem("P2Value");
+  let Player1Name = sessionStorage.getItem("Player1Name");
+  let Player2Name = sessionStorage.getItem("Player2Name");
 
 //   console.log(Title);
 
@@ -23,16 +23,16 @@ function SemiResult() {
       <div className="main-part-down-sm">
         <div className="p-details">
           <div className="p-1-details">
-            <h2 className="p-1-details-name" label="Player 1">{P1Value}</h2>
+            <h2 className="p-1-details-name" label="Player 1">{Player1Name}</h2>
             <div className="p-1-details-score">21</div>
           </div>
           <div className="p-2-details">
-            <h2 className="p-2-details-name" label="Player 2">{P2Value}</h2>
+            <h2 className="p-2-details-name" label="Player 2">{Player2Name}</h2>
             <div className="p-2-details-score">0</div>
           </div>
         </div>
         <h1 className="win-text">
-          {P1Value} wins the game with a score of “ 21 / 0 “
+          {Player1Name} wins the game with a score of “ 21 / 0 “
         </h1>
       </div>
     </div>
