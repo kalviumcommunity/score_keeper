@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function SignUp() {
   return (
     <div className="signup-page">
-        <div className='picture'>
+        <div className='picture-signup'>
             <img className='pic' src={badminton} alt="react-app" />
         </div>
         <div className="signup-content">

@@ -170,25 +170,6 @@ span{
 	cursor: pointer;
 }
 
-.skip{
-	display: inline-block;
-	outline: none;
-	border: 1px solid black;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color: #f9004d;
-	color: black;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px;
-  transition: .4s;
-}
-.skip:hover{
-	background-color: black;
-	border: 1px solid #f9004d;
-  color: white;
-	cursor: pointer;
-}
 
 .signup{
 	display: inline-block;
@@ -216,6 +197,11 @@ span{
 .login-page{
   display: flex;
   justify-content: center;
+}
+
+.picture-login{
+  margin-top: 1%;
+  width: 50%;
 }
 
 .login-content{
@@ -266,6 +252,11 @@ span{
   margin-top: 11%;
 }
 
+.picture-signup{
+  margin-top: 1%;
+  width: 50%;
+}
+
 .signup-page{
   display: flex;
   justify-content: center;
@@ -291,6 +282,11 @@ span{
 .game-page{
   display: flex;
   justify-content: center;
+}
+
+.picture-gp{
+  margin-top: 1%;
+  width: 50%;
 }
 
 .gamepage-content{
@@ -364,14 +360,14 @@ span{
 }
 
 #gametitle-re{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 40%;
   border: solid white;
   text-align: center;
   font-size: x-large;
 }
 .main-part-up{
-  margin-top: 2%;
+  margin-top: 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -436,6 +432,10 @@ span{
   margin-bottom: 5%;
   font-size: x-large;
   background-color: transparent;
+}
+
+.functions-mobile{
+  display: none;
 }
 
 .functions{
@@ -526,4 +526,133 @@ input{
   color: white;
 }
 
-
+@media screen and (max-width: 650px) {
+  .home{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .picture{
+    width: 100%;
+  }
+  .home-content{
+    width: 85%;
+    margin-top: 2%;
+  }
+  .nav-con{
+    display: none;
+  }
+  .app-name{
+    width: 100%;
+    font-size: x-large;
+  }
+  .picture{
+    margin-top: 10%;
+  }
+  .heading{
+    font-size: xx-large;
+  }
+  .sub-heading{
+    font-size: x-large;
+    margin-bottom: 3%;
+  }
+  .heading-content{
+    margin-top: 3%;
+    font-size: medium;
+  }
+  .picture-login{
+    display: none;
+  }
+  .login-content{
+    width: 70%;
+    margin-top: 40%;
+    height: 225px;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-heading{
+    margin-top: 8%;
+    font-size: xx-large;
+  }
+  .email{
+    margin-top: 0%;
+    width: 70%;
+    height: auto;
+    font-size: medium;
+    margin-bottom: 2%;
+    margin-top: -3%;
+  }
+  .password{
+    margin-top: 0%;
+    width: 70%;
+    height: auto;
+    font-size: medium;
+    margin-bottom: 2%;
+    margin-bottom: 5%;
+  }
+  .picture-signup{
+    display: none;
+  }
+  .signup-content{
+    width: 70%;
+    margin-top: 40%;
+    height: 225px;
+    align-items: center;
+    justify-content: center;
+  }
+  .signup-heading{
+    margin-top: 8%;
+    font-size: xx-large;
+  }
+  .picture-gp{
+    display: none;
+  }
+  .gamepage-content{
+    width: 80%;
+    margin-top: 40%;
+    height: fit-content;
+  }
+  .record-game{
+    width: 75%;
+    height: 100px;
+  }
+  .view-game{
+    width: 75%;
+    height: 100px;
+    margin-bottom: 2%;
+  }
+  #gametitle-re{
+    width: 70%;
+    font-size: large;
+    margin-top: 8%;
+    margin-bottom: 5%;
+  }
+  .score-1{
+    display: none;
+  }
+  .score-2{
+    display: none;
+  }
+  .b-court{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .functions{
+    display: none;
+  }
+  .functions-mobile{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
+  .p-1-details{
+    width: 45%;
+  }
+  .p-2-details{
+    width: 45%;
+  }
+}
