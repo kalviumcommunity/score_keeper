@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function GamePage() {
   return (
     <div className="game-page">
-        <div className='picture'>
+        <div className='picture-gp'>
             <img className='pic' src={badminton} alt="react-app" />
         </div>
         <div className="gamepage-content">
