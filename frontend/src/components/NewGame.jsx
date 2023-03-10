@@ -113,6 +113,11 @@ function NewGame() {
                 </div>
                 <div className="score-2">{count2}</div>
             </div>
+            <div className="main-part-up-2">
+                <div className="score-1-mob">{count1}</div>
+                
+                <div className="score-2-mob">{count2}</div>
+            </div>
             <div className="functions-mobile">
                     <Button className="p-1-add" title={"+1"} action={incrementCountP1} />
                     <Button title={"undo"} action={undo} />
