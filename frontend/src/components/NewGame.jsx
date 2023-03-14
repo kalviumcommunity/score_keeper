@@ -11,8 +11,8 @@ function NewGame() {
     const [inputValue, setInputValue] = useState("");
     // console.log(inputValue);
 
-    const [Player1Name, setPlayer1Name] = useState("");
-    const [Player2Name, setPlayer2Name] = useState("");
+    const [player1Name, setPlayer1Name] = useState("");
+    const [player2Name, setPlayer2Name] = useState("");
     const [gameActions, setGameActions] = useState([]);
 
     // Update session storage whenever the input value changes
@@ -21,12 +21,12 @@ function NewGame() {
     }, [inputValue]);
 
     useEffect(() => {
-        sessionStorage.setItem("Player1Name", Player1Name);
-    }, [Player1Name]);
+        sessionStorage.setItem("player1Name", player1Name);
+    }, [player1Name]);
 
     useEffect(() => {
-        sessionStorage.setItem("Player2Name", Player2Name);
-    }, [Player2Name]);
+        sessionStorage.setItem("player2Name", player2Name);
+    }, [player2Name]);
 
 
 
@@ -113,6 +113,11 @@ function NewGame() {
                 </div>
                 <div className="score-2">{count2}</div>
             </div>
+            <div className="main-part-up-2">
+                <div className="score-1-mob">{count1}</div>
+                
+                <div className="score-2-mob">{count2}</div>
+            </div>
             <div className="functions-mobile">
                     <Button className="p-1-add" title={"+1"} action={incrementCountP1} />
                     <Button title={"undo"} action={undo} />
@@ -124,7 +129,7 @@ function NewGame() {
                         className="p-1-details-name"
                         id="white-text"
                         placeholder="Player 1"
-                        value={Player1Name}
+                        value={player1Name}
                         onChange={p1Change}
                     />
                     <div className="p-1-details-score">{count1}</div>
@@ -139,7 +144,7 @@ function NewGame() {
                         className="p-2-details-name"
                         id="white-text"
                         placeholder="Player 2"
-                        value={Player2Name}
+                        value={player2Name}
                         onChange={p2Change}
                     />
                     <div className="p-2-details-score">{count2}</div>
