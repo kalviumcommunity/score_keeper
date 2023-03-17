@@ -78,6 +78,7 @@ span{
   color: #f9004d;
   background-color: transparent;
   font-size: x-large;
+  text-shadow: .5px .1px 0px white, 0px 0px 35px black;
 }
 
 .nav-content{
@@ -100,12 +101,93 @@ span{
   cursor: pointer;
 }
 
+.user-data{
+  height: 75%;
+  margin-left: 1%;
+  margin-right: 3%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+}
+
+.name-div{
+  background-color: transparent;
+}
+
+.user-name{
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: transparent;
+}
+
+.user-pic{
+  height: 125%;
+  margin-right: 2%;
+  background-color: transparent;
+  border-radius: 50%;
+  background-color: #181818;
+  border: solid #f9004d;
+  cursor: pointer;
+  transition: 5s;
+}
+
+.user-pic:hover{
+  border: solid black;
+  transition: 1s;
+}
+
+.yes{
+	display: inline-block;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color:#f9004d;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 10px #858585;
+	top: 6px;
+	right: 6px;
+  transition: 2s;
+  font-size: large;
+}
+.yes:hover{
+	background-color: transparent;
+	border: 1px solid #f9004d;
+  color: white;
+	cursor: pointer;
+}
+
+.no{
+	display: inline-block;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: green;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 10px #858585;
+	top: 6px;
+	right: 6px;
+  transition: 1s;
+  font-size: large;
+}
+.no:hover{
+	background-color: transparent;
+	border: 1px solid green;
+  color: white;
+	cursor: pointer;
+}
+
+
 /* HOME */
 
 .home{
   display: flex;
   justify-content: center;
   border-bottom: solid white;
+  height: 3%;
 }
 
 .picture{
@@ -134,6 +216,8 @@ span{
   font-size: -webkit-xxx-large;
   background-color: transparent;
   color: white;
+  text-shadow: 0px 0px 90px #000, 0px 0px 35px #858585;
+
 }
 
 .sub-heading{
@@ -142,7 +226,6 @@ span{
   font-size: x-large;
   background-color: transparent;
   color: white;
-  /* box-shadow: 0px 0px 90px #000, 0px 0px 5px #858585; */
   width: fit-content;
 }
 
@@ -172,7 +255,7 @@ span{
 	border-radius: 30px;
 	background-color: #f9004d;
 	color: black;
-	box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
+	/* box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585; */
 	top: 6px;
 	right: 6px;
   transition: .4s;
@@ -185,113 +268,6 @@ span{
   color: white;
 	cursor: pointer;
 }
-
-
-.signup{
-	display: inline-block;
-	outline: none;
-	border: 1px solid black;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color:#f9004d;
-	color: white;
-	box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
-	top: 6px;
-	right: 6px;
-  transition: .4s;
-  font-size: large;
-}
-.signup:hover{
-	background-color: transparent;
-	border: 1px solid #f9004d;
-  color: white;
-	cursor: pointer;
-}
-
-/* Log-In */
-
-.login-page{
-  display: flex;
-  justify-content: center;
-}
-
-.picture-login{
-  margin-top: 1%;
-  width: 50%;
-}
-
-.login-content{
-  display: flex;
-  align-items: center;
-  margin-top: 15%;
-  margin-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  background-color: #d9d9d9;
-  width: 40%;
-  border: solid #f9004d;
-  border-radius: 10%;
-  
-}
-
-.login-heading{
-  background-color: #d9d9d9;
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 11%;
-}
-
-.email{
-  margin-top: 3%;
-  width: 50%;
-  height: 6%;
-  margin-bottom: 1%;
-  border: solid black;
-  color: white;
-}
-
-.password{
-  width: 50%;
-  height: 6%;
-  margin-top: 1%;
-  border: solid black;
-  margin-bottom: 8%;
-  color: white;
-}
-
-/* Sign-Up */
-
-.signup-heading{
-  background-color: #d9d9d9;
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 11%;
-}
-
-.picture-signup{
-  margin-top: 1%;
-  width: 50%;
-}
-
-.signup-page{
-  display: flex;
-  justify-content: center;
-}
-
-.signup-content{
-  display: flex;
-  align-items: center;
-  margin-top: 15%;
-  margin-bottom: 13%;
-  display: flex;
-  flex-direction: column;
-  background-color: #d9d9d9;
-  width: 40%;
-  border: solid #f9004d;
-  border-radius: 10%;
-  
-}
-
 
 /* Game-Page */
 
@@ -645,50 +621,6 @@ input{
     margin-top: 3%;
     font-size: medium;
   }
-  .picture-login{
-    display: none;
-  }
-  .login-content{
-    width: 70%;
-    margin-top: 60%;
-    height: 225px;
-    align-items: center;
-    justify-content: center;
-  }
-  .login-heading{
-    margin-top: 8%;
-    font-size: xx-large;
-  }
-  .email{
-    margin-top: 0%;
-    width: 70%;
-    height: auto;
-    font-size: medium;
-    margin-bottom: 2%;
-    margin-top: -3%;
-  }
-  .password{
-    margin-top: 0%;
-    width: 70%;
-    height: auto;
-    font-size: medium;
-    margin-bottom: 2%;
-    margin-bottom: 5%;
-  }
-  .picture-signup{
-    display: none;
-  }
-  .signup-content{
-    width: 70%;
-    margin-top: 60%;
-    height: 225px;
-    align-items: center;
-    justify-content: center;
-  }
-  .signup-heading{
-    margin-top: 8%;
-    font-size: xx-large;
-  }
   .picture-gp{
     display: none;
   }
@@ -782,6 +714,14 @@ input{
     font-size: x-large;
     width: 90%;
   }
+  .end{
+    display: flex;
+    flex-direction: column;
+  }
+  .save-game{
+    width: 40%;
+    margin-top: 2%;
+  }
 }
 
 .title{
@@ -789,6 +729,7 @@ input{
   margin-top: 13vh;
   color: #f9004d;
   text-align: center;
+  text-shadow: 1px 1px 00px white, 0px 0px 90px black;
 }
 .para{
   font-size: large;

@@ -1,0 +1,87 @@
+.login-container {
+    position: relative;
+  }
+  
+  .google-login-btn {
+    padding: 0.8rem 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 1rem;
+  
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  
+    color: var(--white);
+  }
+  
+  .logged-in-btn {
+    padding: 0.8rem 1.6rem;
+  }
+  
+  .google-logo {
+    width: 2.7rem;
+    border-radius: 100%;
+  }
+  
+  .logoutAlert {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.3rem;
+    position: absolute;
+    width: 13rem;
+    border-radius: 3rem;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.3rem;
+    /* line-height: 2.7rem; */
+    top: 6rem;
+    right: 35px;
+    border: 1px solid white;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  
+  .alert-btn-container {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alert-text{
+    margin-bottom: 1rem;
+  }
+  
+  .alert-btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  
+    color: var(--black);
+    background-color: var(--periwinkle);
+  
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .alert-btn.no {
+    color: var(--white);
+    background-color: var(--tropical-indigo);
+  }
+  
+  @media (max-width: 480px) {
+    .google-login-btn {
+      border-radius: 10rem;
+      padding: 0.4rem;
+    }
+    .login-btn-txt {
+      display: none;
+    }
+    .google-logo {
+      width: 3.4rem;
+    }
+  }
