@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import fevicon from '../Pictures/Logo.png'
+import LoginButton from './Login/LoginButton'
+// import LogoutButton from './LogoutButton'
+// import Profile from './Profile'
 
 
 function NavBar() {
@@ -13,7 +16,9 @@ function NavBar() {
           <Link to={'/about'}><div className='nav-con'>About</div></Link>
           <Link to={'/rules'}><div className='nav-con'>Rules</div></Link>
         </div>
-        <Link to={'/login'}><button className='login'>LogIn</button></Link>
+        <LoginButton>LogIn</LoginButton>
+        {/* <LogoutButton id='login'>LogOut</LogoutButton> */}
+        {/* <Profile id='profile'></Profile> */}
     </div>
   )
 }
