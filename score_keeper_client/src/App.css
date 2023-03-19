@@ -102,7 +102,7 @@ span{
 }
 
 .user-data{
-  height: 75%;
+  /* height: 75%; */
   margin-left: 1%;
   margin-right: 3%;
   background-color: transparent;
@@ -123,18 +123,19 @@ span{
 }
 
 .user-pic{
-  height: 125%;
-  margin-right: 2%;
+  width: 55%;
   background-color: transparent;
   border-radius: 50%;
   background-color: #181818;
   border: solid #f9004d;
   cursor: pointer;
   transition: 5s;
+  padding: 1vh;
 }
 
 .user-pic:hover{
   border: solid black;
+  border-radius: 30%;
   transition: 1s;
 }
 
@@ -250,15 +251,15 @@ span{
 .login{
 	display: inline-block;
 	outline: none;
-	border: 2px solid black;
-	padding: 10px 30px;
+	border: 2px solid #f9004d;
+	padding: 10px 10px;
 	border-radius: 30px;
 	background-color: #f9004d;
 	color: black;
 	/* box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585; */
 	top: 6px;
 	right: 6px;
-  transition: .4s;
+  transition: .2s;
   font-size: large;
   margin-right: 20px;
 }
@@ -580,7 +581,7 @@ input{
   text-shadow: #181818;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1050px) {
   .navbar{
     height: 9vh;
   }
