@@ -56,7 +56,7 @@ export default function LoginAuth0() {
           style={{backgroundColor: "black"}}
           onClick={loginWithRedirect}
         >
-          <span className="login" style={{marginTop: "10px"}}>Login</span>
+          <span className="login" style={{padding:"10px 30px"}}>Login</span>
         </div>
       )}
       {alert && (

@@ -8,6 +8,7 @@ import NewGame from './components/NewGame'
 import SemiResult from './components/SemiResult'
 import Rules from './components/Rules'
 import OldGame from './components/OldGame'
+import About from './components/About'
 import "./App.css"
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/oldgames' element={<OldGame/>}/>
         <Route path='/semiresult' element={<SemiResult />}/>
         <Route path='/rules' element={<Rules />}/>
+        <Route path='/about' element={<About />}/>
         <Route path='*' element={<ErrorPage />}/>
       </Routes>
     </>
