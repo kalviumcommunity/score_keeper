@@ -561,6 +561,7 @@ input{
 }
 
 .old-gamepage-content{
+  padding: 1vh 1vh;
   display: flex;
   align-items: center;
   margin-top: 9%;
@@ -568,7 +569,8 @@ input{
   display: flex;
   flex-direction: column;
   background-color: #d9d9d9;
-  width: 40%;
+  width: 40vw;
+  height: 80vh;
   border: solid black;
   border-radius: 10%;
 	box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
@@ -579,6 +581,16 @@ input{
   color: #f9004d;
   text-shadow: solid #181818;
   text-shadow: #181818;
+  height: 6vh;
+}
+
+.old-gamepage-data{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  height: 65vh;
+  overflow-y: scroll;
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 1050px) {
