@@ -10,11 +10,11 @@ function OldGame() {
     fetch(process.env.REACT_APP_WEB_URI)
       .then((response) => response.json())
       .then((data) => {
-        setData(data);
+        setData(data.reverse());
       })
       .catch((error) => console.log(error));
   }, []);
-
+  
   return (
     <>
       <div className="game-page">
@@ -35,6 +35,17 @@ function OldGame() {
                   style={{
                     backgroundColor: "transparent",
                     marginTop: "0px",
+                    marginBottom: "6px",
+                    textAlign:"center",
+                    // boxShadow:"0px 0px 100px 0px black, 0px 0px 100px 0px white"
+                  }}
+                >
+                  {item.title}
+                </h1>
+                <h1 style={{
+                    backgroundColor: "transparent",
+                    fontSize:"x-large",
+                    marginTop: "0px",
                     marginBottom: "0px",
                   }}
                 >
@@ -45,6 +56,7 @@ function OldGame() {
                     backgroundColor: "transparent",
                     marginTop: "0px",
                     marginBottom: "0px",
+                    fontSize:"x-large",
                   }}
                 >
                   Score: {item.score1} - {item.score2}

@@ -5,14 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 function NewGame() {
     //title of game
-
     const [inputValue, setInputValue] = useState("");
     // console.log(inputValue);
 
     const [player1Name, setPlayer1Name] = useState("");
     const [player2Name, setPlayer2Name] = useState("");
     const [gameActions, setGameActions] = useState([]);
-
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+    
     // Update session storage whenever the input value changes
     useEffect(() => {
         sessionStorage.setItem("inputValue", inputValue);
@@ -26,6 +27,13 @@ function NewGame() {
         sessionStorage.setItem("player2Name", player2Name);
     }, [player2Name]);
 
+    useEffect(() => {
+        sessionStorage.setItem("player1Score", count1);
+    }, [count1]);
+
+    useEffect(() => {
+        sessionStorage.setItem("player2Score", count2);
+    }, [count2]);
 
 
     // Update state whenever the input value changes
@@ -41,10 +49,11 @@ function NewGame() {
         setPlayer2Name(event.target.value);
     };
 
+
+
     // Logic
 
-    const [count1, setCount1] = useState(0);
-    const [count2, setCount2] = useState(0);
+    
 
     const navigate = useNavigate();
 
@@ -66,11 +75,13 @@ function NewGame() {
         setCount2(count2 + 1);
     };
 
-    if (count1 >= 21) {
+    if (count1 >= 21 && Math.abs(count1-count2) >= 2) {
+        
         navigate("/semiresult");
-    }
+    } 
 
-    if (count2 >= 21) {
+    if (count2 >= 21 && Math.abs(count2-count1) >= 2) {
+        
         navigate("/semiresult");
     }
 
@@ -133,7 +144,7 @@ function NewGame() {
                     <div className="p-1-details-score">{count1}</div>
                 </div>
                 <div className="functions">
-                    <Button className="p-1-add" title={"+1"} action={incrementCountP1} />
+                    <Button className="p-1-add" title={"+1"} action={incrementCountP1}/>
                     <Button title={"undo"} action={undo} />
                     <Button title={"+1"} action={incrementCountP2} />
                 </div>

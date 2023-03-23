@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Login.css";
 // import Loading from "../Loading/Loading";
@@ -8,6 +8,7 @@ export default function LoginAuth0() {
     useAuth0();
 
   const [alert, setAlert] = useState(false);
+  const authDataRef = useRef(null);
   const sendUserData = async () => {
     try {
       const { name, sub } = user;
@@ -40,6 +41,19 @@ export default function LoginAuth0() {
   function handleLogout() {
     logout({ logoutParams: { returnTo: window.location.origin } });
   }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (authDataRef.current && !authDataRef.current.contains(event.target)) {
+        setAlert(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [alert]);
 
   return (
     <div className="user-data">
@@ -60,7 +74,7 @@ export default function LoginAuth0() {
         </div>
       )}
       {alert && (
-        <div className="logoutAlert">
+        <div className="logoutAlert" ref={authDataRef}>
           <div className="alert-text" style={{color: "white"}}>Are you sure you want to logout?</div>
           <div className="alert-btn-container">
             <button className="no" onClick={() => setAlert(!alert)}>

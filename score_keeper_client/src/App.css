@@ -1,5 +1,5 @@
 *{
-  background-color: #181818;
+  background-color: #202020;
 }
 
 #root{
@@ -108,6 +108,8 @@ span{
   background-color: transparent;
   display: flex;
   flex-direction: row;
+  height: 8vh;
+  width: 8vw;
 }
 
 .name-div{
@@ -123,14 +125,15 @@ span{
 }
 
 .user-pic{
-  width: 55%;
+  height: 7vh;
+  width: auto;
   background-color: transparent;
   border-radius: 50%;
   background-color: #181818;
   border: solid #f9004d;
   cursor: pointer;
   transition: 5s;
-  padding: 1vh;
+  padding: .5vh;
 }
 
 .user-pic:hover{
@@ -593,9 +596,13 @@ input{
   border-radius: 30px;
 }
 
-@media screen and (max-width: 1050px) {
+.old-gamepage-data::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
   .navbar{
-    height: 9vh;
+    height: 12vh;
   }
   .logo{
     height: 9vh;
