@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Login.css";
-// import Loading from "../Loading/Loading";
 
 export default function LoginAuth0() {
   const { loginWithRedirect, user, isAuthenticated,  logout } =
@@ -11,18 +10,10 @@ export default function LoginAuth0() {
   const authDataRef = useRef(null);
   const sendUserData = async () => {
     try {
-      const { name, sub } = user;
       const res = await fetch(process.env.REACT_APP_SERVER_URL + "/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          notes: `<p>Hi ${name}. Write your first note here...!</p>`,
-          uid: sub,
-          completed_chapters: [],
-        }),
+        
+        
       });
       const data = await res.json();
 
@@ -70,7 +61,7 @@ export default function LoginAuth0() {
           style={{backgroundColor: "black"}}
           onClick={loginWithRedirect}
         >
-          <span className="login" style={{padding:"10px 30px"}}>Login</span>
+          <span className="login" style={{padding:"10px 30px", border:".1px"}}>Login</span>
         </div>
       )}
       {alert && (

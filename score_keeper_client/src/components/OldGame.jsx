@@ -1,19 +1,26 @@
 import React from "react";
 import badminton from "../Pictures/pngegg.png";
 import { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function OldGame() {
   // Make a GET request to your backend API
   const [data, setData] = useState([]);
+  const { user } = useAuth0();
+
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_WEB_URI)
+
+    if(user){
+    console.log('effec',user)
+
+    fetch(process.env.REACT_APP_WEB_URI+`/${user.sub}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.reverse());
       })
-      .catch((error) => console.log(error));
-  }, []);
+      .catch((error) => console.log(error));}
+  }, [user]);
   
   return (
     <>
