@@ -9,6 +9,7 @@ import SemiResult from './components/SemiResult'
 import Rules from './components/Rules'
 import OldGame from './components/OldGame'
 import About from './components/About'
+import Footer from './components/Footer'
 import "./App.css"
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/about' element={<About />}/>
         <Route path='*' element={<ErrorPage />}/>
       </Routes>
+      <Footer />
     </>
   )
 }

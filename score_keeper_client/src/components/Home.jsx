@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Home() {
-  const {isAuthenticated} =
-    useAuth0();
+  const {isAuthenticated} = useAuth0();
 
     const alertfunc = ()=>{
       alert("Login To Continue!")

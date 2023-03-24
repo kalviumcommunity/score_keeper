@@ -35,7 +35,7 @@ function OldGame() {
             return (
               <div
                 className="login"
-                style={{ marginRight: "0px", marginBottom:"1vh", padding: "20px 30px" }}
+                style={{ marginRight: "0px", marginBottom:"1vh", padding: "20px 30px", border:"2px solid black"}}
                 key={i}
               >
                 <h1

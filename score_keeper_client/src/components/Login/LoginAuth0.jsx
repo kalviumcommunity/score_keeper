@@ -54,14 +54,13 @@ export default function LoginAuth0() {
           onClick={() => setAlert(!alert)}
         >
           <img src={user.picture} alt="" className="user-pic" />
-          {/* <span className="login-btn-txt">Hi, {user.name.split(" ")[0]}</span> */}
         </div>
       ) : (
         <div
-          style={{backgroundColor: "black"}}
+          style={{backgroundColor: "black", height:"fit-content"}}
           onClick={loginWithRedirect}
         >
-          <span className="login" style={{padding:"10px 30px", border:".1px"}}>Login</span>
+          <div className="login" style={{padding:"10px 30px"}}>Login</div>
         </div>
       )}
       {alert && (

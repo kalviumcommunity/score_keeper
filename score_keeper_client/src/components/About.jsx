@@ -23,7 +23,7 @@ function About() {
                     </div>
                     <form className="newslatter" style={{marginBottom:"2%",width:"80%"}}>
                         <input style={{width:"40%",display: "inline-block",padding: "14px 130px 14px 15px",border: "2px solid #f9004d",borderRadius: "30px", backgroundColor:"white", color:"black"}} type="email" id="mail" placeholder="Enter Your Email"/>
-                        <button className="login" style={{marginLeft:"-20.5%",width:"20%", marginTop:"1%",fontSize:"small",padding: "10px 20px !important"}}><a id="btn-text" href="mailto:chandan1012004@gmail.com"> Let's Start</a></button>
+                        <button className="login" style={{marginLeft:"-20.5%",width:"20%", marginTop:"1%",fontSize:"small",padding: "10px 20px !important", zIndex:"0"}}><a id="btn-text" href="mailto:chandan1012004@gmail.com"> Let's Start</a></button>
                             
                     </form>
                     
@@ -48,7 +48,7 @@ function About() {
 
         {/* Experience Section */}
 
-        <section id="skills" style={{display:"flex",flexDirection:"column",height:"87vh"}}>
+        <section id="skills" style={{display:"flex",flexDirection:"column",height:"87vh", borderBottom:"1px solid white"}}>
             <div>
                 <h2 style={{textAlign:"center", fontSize:"xxx-large",color:"white",margin:"4%"}}>My Experience !!</h2>
             </div>
