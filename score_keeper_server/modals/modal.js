@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 // Define a schema for the game data
 const gameDataSchema = new mongoose.Schema({
+    authId: String,
     title: String,
     player1: String,
     player2: String,

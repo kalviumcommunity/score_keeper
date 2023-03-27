@@ -1,5 +1,5 @@
 *{
-  background-color: #181818;
+  background-color: #202020;
 }
 
 #root{
@@ -10,7 +10,7 @@
 .logo{
   height: 10vh;
   width: auto;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 #white-text{
@@ -57,22 +57,17 @@ a {
 .navbar{
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  align-items: center;
+  width: 100vw;
+  align-items:  center;
   border: solid black; 
   background-color: black;
   border-bottom: solid white;
   border-radius: 5px;
   position: fixed;
   height: 12vh;
+  z-index: 1;
 }
 
-.app-name{
-  text-align: left;
-  color: white;
-  background-color: black;
-  margin-left: 5%;
-}
 
 span{
   color: #f9004d;
@@ -83,8 +78,8 @@ span{
 
 .nav-content{
   display: flex;
-  width: 60%;
-  justify-content: space-evenly;
+  width: 50vw;
+  justify-content: space-between;
   color: white;
   background-color: transparent;
 }
@@ -102,12 +97,11 @@ span{
 }
 
 .user-data{
-  /* height: 75%; */
-  margin-left: 1%;
-  margin-right: 3%;
   background-color: transparent;
   display: flex;
   flex-direction: row;
+  width: fit-content;
+  margin-right: 3%;
 }
 
 .name-div{
@@ -123,14 +117,15 @@ span{
 }
 
 .user-pic{
-  width: 55%;
+  height: 7vh;
+  width: auto;
   background-color: transparent;
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: #181818;
   border: solid #f9004d;
   cursor: pointer;
   transition: 5s;
-  padding: 1vh;
+  padding: .5vh;
 }
 
 .user-pic:hover{
@@ -181,6 +176,24 @@ span{
 	cursor: pointer;
 }
 
+.login{
+	border: 2px solid #f9004d;
+  position:relative;
+	padding: 10px 10px;
+	border-radius: 30px;
+	background-color: #f9004d;
+	color: black;
+  transition: .2s;
+  font-size: large;
+  margin-right: 0%;
+}
+.login:hover{
+	background-color: black;
+	border: 2px solid #f9004d;
+  color: white;
+	cursor: pointer;
+}
+
 
 /* HOME */
 
@@ -188,7 +201,7 @@ span{
   display: flex;
   justify-content: center;
   border-bottom: solid white;
-  height: 3%;
+  height:99.7vh;
 }
 
 .picture{
@@ -199,8 +212,8 @@ span{
 .pic{
   width: 100%;
   height: auto;
-  margin-left: -5%;
-  margin-top: 13%;
+  margin-top: 13vh;
+  background-color: transparent;
 }
 
 .home-content{
@@ -248,33 +261,15 @@ span{
   background-color: transparent;
 }
 
-.login{
-	display: inline-block;
-	outline: none;
-	border: 2px solid #f9004d;
-	padding: 10px 10px;
-	border-radius: 30px;
-	background-color: #f9004d;
-	color: black;
-	/* box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585; */
-	top: 6px;
-	right: 6px;
-  transition: .2s;
-  font-size: large;
-  margin-right: 20px;
-}
-.login:hover{
-	background-color: black;
-	border: 2px solid #f9004d;
-  color: white;
-	cursor: pointer;
-}
+
 
 /* Game-Page */
 
 .game-page{
   display: flex;
   justify-content: center;
+  border-bottom: solid white;
+  height: 99.9vh;
 }
 
 .picture-gp{
@@ -350,6 +345,8 @@ span{
   justify-content: center;
   align-items: center;
   font-size: xx-large;
+  border-bottom: solid white;
+  height: 99.9vh;
 }
 
 #gametitle-re{
@@ -405,6 +402,7 @@ span{
   width: 80%;
   display: flex;
   margin-top: 3%;
+  margin-bottom: 5%;
   justify-content: space-between;
 }
 
@@ -414,7 +412,6 @@ span{
   flex-direction: column;
   align-items: right;
   width: 15%;
-  height: 20%;
   border: solid black;
 }
 
@@ -461,7 +458,6 @@ span{
   flex-direction: column;
   align-items: right;
   width: 15%;
-  height: 20%;
   border: solid black;
 }
 
@@ -543,8 +539,6 @@ input{
   transition: .4s;
   font-size: large;
   margin-right: 20px;
-  height: 25%;
-  width: 13%;
 }
 .save-game:hover{
 	background-color: black;
@@ -561,14 +555,16 @@ input{
 }
 
 .old-gamepage-content{
+  padding: 1vh 1vh;
   display: flex;
   align-items: center;
-  margin-top: 9%;
+  margin-top: 8.5%;
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
   background-color: #d9d9d9;
-  width: 40%;
+  width: 40vw;
+  height: 80vh;
   border: solid black;
   border-radius: 10%;
 	box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
@@ -579,11 +575,26 @@ input{
   color: #f9004d;
   text-shadow: solid #181818;
   text-shadow: #181818;
+  height: 6vh;
 }
 
-@media screen and (max-width: 1050px) {
+.old-gamepage-data{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  height: 65vh;
+  width: 35vw;
+  overflow-y: scroll;
+  border-radius: 30px;
+}
+
+.old-gamepage-data::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
   .navbar{
-    height: 9vh;
+    height: 11vh;
   }
   .logo{
     height: 9vh;
@@ -626,18 +637,20 @@ input{
     display: none;
   }
   .gamepage-content{
-    width: 80%;
-    margin-top: 60%;
-    height: fit-content;
+    width: 90vw;
+    margin-top: 16vh;
+    height: 80vh;
+    border-radius: 50px;
   }
   .record-game{
-    width: 75%;
-    height: 100px;
+    width: 70vw;
+    height: 35.5vh;
+    border-radius: 50px;
   }
   .view-game{
-    width: 75%;
-    height: 100px;
-    margin-bottom: 2%;
+    width: 70vw;
+    height: 35.5vh;
+    border-radius: 50px;
   }
   #gametitle-re{
     width: 70%;
@@ -706,7 +719,7 @@ input{
     width: 45%;
   }
   .title-sr{
-    margin-top: 12vh;
+    margin-top: 6vh;
     margin-bottom: 4vh;
     color: white;
   }
@@ -721,13 +734,67 @@ input{
   }
   .save-game{
     width: 40%;
-    margin-top: 2%;
+    margin-top: 4%;
+    margin-right: 0%;
+  }
+  .nav-conn{
+    display: none;
+  }
+  .old-gamepage-content{
+    width: 90vw;
+    margin-top: 13vh;
+    border-radius: 50px;
+    height: 83vh;
+  }
+  .old-gamepage-heading{
+    height: 4vh;
+    margin-top: 1vh;
+  }
+  .old-gamepage-data{
+    width: 85vw;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1050px){
+  .pic{
+    margin-top: 20vh;
+  }
+  .home-content{
+    margin-top: 25vh;
+  }
+  .nav-conn{
+    display: none;
+  }
+  .nav-content{
+    justify-content: space-evenly;
+  }
+  .link-home{
+    display: none;
+  }
+  .picture-gp{
+    display: none;
+  }
+  .gamepage-content{
+    width: 90vw;
+    margin-top: 16vh;
+    height: 80vh;
+    border-radius: 50px;
+  }
+  .record-game{
+    width: 75vw;
+    height: 35.5vh;
+    border-radius: 50px;
+  }
+  .view-game{
+    width: 75vw;
+    height: 35.5vh;
+    border-radius: 50px;
   }
 }
 
 .title{
   font-size: xx-large;
-  margin-top: 13vh;
+  margin-top: 15vh;
   color: #f9004d;
   text-align: center;
   text-shadow: 1px 1px 00px white, 0px 0px 90px black;

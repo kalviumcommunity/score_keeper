@@ -1,9 +1,8 @@
 import React from 'react'
 import photo from '../Pictures/My_photo.jpeg'
-// import { FaBeer } from 'react-icons/fa';
-// AiOutlineGoogle
-// FaHtml5
-// FaRegUser
+import { AiOutlineGoogle } from 'react-icons/ai';
+import { FaHtml5 } from 'react-icons/fa';
+import { FaRegUser } from 'react-icons/fa';
 
 function About() {
   return (
@@ -24,7 +23,7 @@ function About() {
                     </div>
                     <form className="newslatter" style={{marginBottom:"2%",width:"80%"}}>
                         <input style={{width:"40%",display: "inline-block",padding: "14px 130px 14px 15px",border: "2px solid #f9004d",borderRadius: "30px", backgroundColor:"white", color:"black"}} type="email" id="mail" placeholder="Enter Your Email"/>
-                        <button className="login" style={{marginLeft:"-20.5%",width:"20%", marginTop:"1%",fontSize:"small",padding: "10px 20px !important"}}><a id="btn-text" href="mailto:chandan1012004@gmail.com"> Let's Start</a></button>
+                        <button className="login" style={{marginLeft:"-20.5%",width:"20%", marginTop:"1%",fontSize:"small",padding: "10px 20px !important", zIndex:"0"}}><a id="btn-text" href="mailto:chandan1012004@gmail.com"> Let's Start</a></button>
                             
                     </form>
                     
@@ -49,31 +48,34 @@ function About() {
 
         {/* Experience Section */}
 
-        <section id="skills" style={{display:"flex",flexDirection:"column",height:"87vh"}}>
+        <section id="skills" style={{display:"flex",flexDirection:"column",height:"87vh", borderBottom:"1px solid white"}}>
             <div>
-                <h2 style={{textAlign:"center", fontSize:"xxx-large",color:"white",margin:"5%"}}>My Experience !!</h2>
+                <h2 style={{textAlign:"center", fontSize:"xxx-large",color:"white",margin:"4%"}}>My Experience !!</h2>
             </div>
 
             <div style={{display:"flex",flexDirection:"row",justifyContent:"space-evenly",marginLeft:"5%",marginRight:"5%"}}>
 
-                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"48vh"}}>
-                    <h5 style={{backgroundColor:"black",color:"white",margin:"30px 0px 15px 0px",fontSize:"xx-large", textAlign:"center"}}>Professional Skills</h5>
+                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"60vh",display:"flex",flexDirection:"column",alignItems:"center"}}>
+                    <AiOutlineGoogle style={{backgroundColor:"black",color:"#f9004d", width:"8vh", height:"7vh", border:"2px solid #f9004d", borderRadius:"40%", padding:"10px", marginTop:"5%"}}/>
+                    <h5 style={{backgroundColor:"black",color:"white",height:"10%",margin:"25px 0px 10px 0px",fontSize:"xx-large", textAlign:"center"}}>Professional Skills</h5>
                     <div class="pra" style={{backgroundColor:"black",color:"white",display:"flex",flexDirection:"column",alignItems:"center"}}>
                         <p style={{backgroundColor:"black",color:"#fcfc", fontSize:"large", fontWeight:"bold",textAlign:"center",marginLeft:"10%",marginRight:"10%",height:"18vh"}}>It's not only about what we wear and present, it's all about the way you follow your office culture and your behaviour at certain surcumstances in a work place.</p>
                         <h3 style={{padding:"10px 20px", fontSize:"medium",marginRight:"0px"}} className="login">Read More</h3>
                     </div>
                 </div>
 
-                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"48vh"}}>
-                    <h5 style={{backgroundColor:"black",color:"white",fontSize:"xx-large", textAlign:"center",margin:"30px 0px 15px 0px"}}>Web Development</h5>
+                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"60vh",display:"flex",flexDirection:"column",alignItems:"center"}}>
+                    <FaHtml5 style={{backgroundColor:"black",color:"#f9004d", width:"8vh", height:"7vh", border:"2px solid #f9004d", borderRadius:"40%", padding:"10px", marginTop:"5%"}}/>
+                    <h5 style={{backgroundColor:"black",color:"white",fontSize:"xx-large", textAlign:"center",margin:"25px 0px 10px 0px"}}>Web Development</h5>
                     <div class="pra" style={{backgroundColor:"black",color:"white",display:"flex",flexDirection:"column",alignItems:"center"}}>
                         <p style={{backgroundColor:"black",color:"#fcfc", fontSize:"large", fontWeight:"bold",textAlign:"center",marginLeft:"10%",marginRight:"10%",height:"18vh"}}>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
                         <h3 style={{padding:"10px 20px", fontSize:"medium",marginRight:"0px"}} className="login">Read More</h3>
                     </div>
                 </div>
 
-                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"48vh"}}>
-                    <h5 style={{backgroundColor:"black",color:"white",margin:"30px 0px 15px 0px",fontSize:"xx-large", textAlign:"center"}}>Problem Solving</h5>
+                <div style={{backgroundColor:"black",width:"30%",padding: "4px 5px",borderRadius:"40px",height:"60vh",display:"flex",flexDirection:"column",alignItems:"center"}}>
+                    <FaRegUser style={{backgroundColor:"black",color:"#f9004d", width:"8vh", height:"7vh", border:"2px solid #f9004d", borderRadius:"40%", padding:"10px", marginTop:"5%"}}/>
+                    <h5 style={{backgroundColor:"black",color:"white",margin:"25px 0px 10px 0px",fontSize:"xx-large", textAlign:"center"}}>Problem Solving</h5>
                     <div class="pra" style={{backgroundColor:"black",color:"white",display:"flex",flexDirection:"column",alignItems:"center"}}>
                         <p style={{backgroundColor:"black",color:"#fcfc", fontSize:"large", fontWeight:"bold",textAlign:"center",marginLeft:"10%",marginRight:"10%",height:"18vh"}}>Every problem should be solved with two primary goals: Firstly, it needs to be assigned with names anyother user can also understand. Secondly, it needs to be as short as possible.</p>
                         <h3 style={{padding:"10px 20px", fontSize:"medium", marginRight:"0px"}} className="login">Read More</h3>

@@ -6,7 +6,12 @@ const GameData=require("./modals/modal")
 require("dotenv").config();
 
 // Create an Express app
-const app = express();
+const app = express(
+  {cors:{origin:"*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true}}
+);
 
 app.use(cors());
 app.use(express.json());
@@ -24,10 +29,11 @@ mongoose
 app.post("/submitGameData", async (req, res) => {
   try {
     // Extract game data from the request body
-    const { title, player1, player2, score1, score2, winText } = req.body;
+    const {authId, title, player1, player2, score1, score2, winText } = req.body;
 
     // Create a new game data document
     const gameData = new GameData({
+      authId,
       title,
       player1,
       player2,
@@ -51,6 +57,19 @@ app.get("/getAllGameData", async (req, res) => {
   const gameData = await GameData.find()
   res.status(200).send(gameData)
 })
+
+///////////////////////////////////
+
+app.get("/getAllGameData/:authId", (req, res) => {
+  const { authId } = req.params;
+  console.log(req.params);
+  GameData
+    .find({ authId })
+    .then((data) => res.json(data))
+    .catch((err) => console.log(err));
+});
+
+/////////////////////////////////
 
 app.get("/singleGameData/:id", async (req, res) => {
   const { id } = req.params

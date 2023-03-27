@@ -1,27 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Login.css";
-// import Loading from "../Loading/Loading";
 
 export default function LoginAuth0() {
   const { loginWithRedirect, user, isAuthenticated,  logout } =
     useAuth0();
 
   const [alert, setAlert] = useState(false);
+  const authDataRef = useRef(null);
   const sendUserData = async () => {
     try {
-      const { name, sub } = user;
       const res = await fetch(process.env.REACT_APP_SERVER_URL + "/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          notes: `<p>Hi ${name}. Write your first note here...!</p>`,
-          uid: sub,
-          completed_chapters: [],
-        }),
+        
+        
       });
       const data = await res.json();
 
@@ -40,6 +32,19 @@ export default function LoginAuth0() {
   function handleLogout() {
     logout({ logoutParams: { returnTo: window.location.origin } });
   }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (authDataRef.current && !authDataRef.current.contains(event.target)) {
+        setAlert(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [alert]);
 
   return (
     <div className="user-data">
@@ -49,18 +54,17 @@ export default function LoginAuth0() {
           onClick={() => setAlert(!alert)}
         >
           <img src={user.picture} alt="" className="user-pic" />
-          {/* <span className="login-btn-txt">Hi, {user.name.split(" ")[0]}</span> */}
         </div>
       ) : (
         <div
-          style={{backgroundColor: "black"}}
+          style={{backgroundColor: "black", height:"fit-content"}}
           onClick={loginWithRedirect}
         >
-          <span className="login" style={{padding:"10px 30px"}}>Login</span>
+          <div className="login" style={{padding:"10px 30px"}}>Login</div>
         </div>
       )}
       {alert && (
-        <div className="logoutAlert">
+        <div className="logoutAlert" ref={authDataRef}>
           <div className="alert-text" style={{color: "white"}}>Are you sure you want to logout?</div>
           <div className="alert-btn-container">
             <button className="no" onClick={() => setAlert(!alert)}>
