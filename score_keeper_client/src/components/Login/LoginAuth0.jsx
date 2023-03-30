@@ -57,7 +57,7 @@ export default function LoginAuth0() {
         </div>
       ) : (
         <div
-          style={{backgroundColor: "black", height:"fit-content"}}
+          style={{backgroundColor: "transparent", height:"fit-content"}}
           onClick={loginWithRedirect}
         >
           <div className="login" style={{padding:"10px 30px"}}>Login</div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Court from "../Pictures/court.png";
-import Button from "./Button";
+import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
 function NewGame() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import fevicon from '../Pictures/Logo.png'
+import fevicon from './Pictures/Logo.png'
 import LoginButton from './Login/LoginButton'
 
 

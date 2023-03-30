@@ -45,7 +45,7 @@ function SemiResult() {
     e.preventDefault();
     const authId = user.sub;
     
-    fetch(`https://score-keeper-server.onrender.com/submitGameData`, {
+    fetch(`http://localhost:4000/submitGameData`, {
     
     // Adding method type
     method: "POST",
@@ -74,7 +74,6 @@ function SemiResult() {
 .then(json => console.log(json));
     window.location.href="/";
   }
-//   console.log(Title);
 
   return (
     <div className="newgame-page">
