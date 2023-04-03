@@ -3,7 +3,7 @@ import Court from "../Pictures/court.png";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
-function NewGame() {
+function NewGameEl() {
     //title of game
     const [inputValue, setInputValue] = useState("");
     // console.log(inputValue);
@@ -163,4 +163,4 @@ function NewGame() {
         </div>
     );
 }
-export default NewGame;
+export default NewGameEl;

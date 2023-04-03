@@ -28,11 +28,12 @@ a {
 
 .content{
   background-color: transparent;
-  margin-top: 13%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 99.9vh;
+  border-bottom: 1px solid white;
 }
 
 .er{

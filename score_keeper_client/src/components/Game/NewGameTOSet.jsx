@@ -10,7 +10,9 @@ function NewGame() {
 
     const [player1Name, setPlayer1Name] = useState("");
     const [player2Name, setPlayer2Name] = useState("");
+
     const [gameActions, setGameActions] = useState([]);
+    
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     
