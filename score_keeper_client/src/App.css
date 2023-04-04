@@ -211,9 +211,9 @@ span{
 }
 
 .pic{
-  width: 100%;
+  width: 80%;
   height: auto;
-  margin-top: 13vh;
+  margin-top: 18vh;
   background-color: transparent;
 }
 
@@ -563,7 +563,7 @@ input{
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
-  background-color: #d9d9d9;
+  background-color: white;
   width: 40vw;
   height: 80vh;
   border: solid black;
@@ -591,6 +591,12 @@ input{
 
 .old-gamepage-data::-webkit-scrollbar{
   display: none;
+}
+
+.loading{
+  height: 67vh;
+  width: 35vw;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 650px) {
@@ -753,12 +759,22 @@ input{
   }
   .old-gamepage-data{
     width: 85vw;
+    height: 72vh;
+  }
+  .pic{
+    width: 95%;
+    margin-top: 13vh;
+  }
+  .loading{
+    width: 85vw;
+    height: 40vh;
+    margin-top: 6vh;
   }
 }
 
 @media screen and (min-width: 650px) and (max-width: 1050px){
   .pic{
-    margin-top: 20vh;
+    margin-top: 30vh;
   }
   .home-content{
     margin-top: 25vh;
@@ -791,6 +807,35 @@ input{
     height: 35.5vh;
     border-radius: 50px;
   }
+  .old-gamepage-content{
+    padding: 1vh 1vh;
+    align-items: center;
+    margin-top: 14vh;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 95vw;
+    height: 82vh;
+    border: solid black;
+    border-radius: 10%;
+    box-shadow: 0px 0px 5px #000, 0px 0px 35px #858585;
+  }
+  .old-gamepage-data{
+    height: 67vh;
+    width: 85vw;
+  }
+  .loading{
+    width: 85vw;
+  }
+  .loading-nav{
+    height: 7vh;
+    border-radius: 50%;
+    margin-right: 3%;
+    padding: 1px 1px;
+    border: 2px solid #f9004d;
+  }
 }
 
 .title{
@@ -806,4 +851,12 @@ input{
   margin-left: 10%;
   color: #fcfc;
   text-align: justify;
+}
+
+.loading-nav{
+  width: 4%;
+  border-radius: 50%;
+  margin-right: 3%;
+	padding: 3px 3px;
+	border: 2px solid #f9004d;
 }

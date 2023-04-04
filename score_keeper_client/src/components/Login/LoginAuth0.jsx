@@ -1,19 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Login.css";
+import loai from "../Pictures/Loaing.gif"
+
 
 export default function LoginAuth0() {
-  const { loginWithRedirect, user, isAuthenticated,  logout } =
+  const { loginWithRedirect, user, isAuthenticated,isLoading,  logout } =
     useAuth0();
 
   const [alert, setAlert] = useState(false);
   const authDataRef = useRef(null);
+
   const sendUserData = async () => {
     try {
       const res = await fetch(process.env.REACT_APP_SERVER_URL + "/login", {
         method: "POST",
-        
-        
       });
       const data = await res.json();
 
@@ -45,6 +46,10 @@ export default function LoginAuth0() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [alert]);
+
+  if(isLoading){
+    return <img className="loading-nav" src={loai} alt="" />
+  }
 
   return (
     <div className="user-data">
