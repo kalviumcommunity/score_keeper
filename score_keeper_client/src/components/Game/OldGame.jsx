@@ -16,7 +16,7 @@ function OldGame() {
     if(user){
     console.log('effec',user)
 
-    fetch(process.env.REACT_APP_WEB_URI+`/${user.sub}`)
+    fetch(process.env.REACT_APP_FETCH_URI+`/${user.sub}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.reverse());
@@ -39,6 +39,7 @@ function OldGame() {
             {loading?(
               <div className="loading">
                 <img className="loading" src={loai} alt="" />
+                <h3 style={{marginTop:"-25px", textAlign:"center"}}>Loading Your Game Details...</h3>
               </div>
             ):(
               <>

@@ -45,7 +45,7 @@ function SemiResult() {
     e.preventDefault();
     const authId = user.sub;
     
-    fetch(`http://localhost:4000/submitGameData`, {
+    fetch(process.env.REACT_APP_SUBMIT_URI, {
     
     // Adding method type
     method: "POST",

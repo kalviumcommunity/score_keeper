@@ -10,7 +10,7 @@ import Rules from './components/Rules'
 import OldGame from './components/Game/OldGame'
 import About from './components/About'
 import Footer from './components/Footer'
-import NewGameEl from './components/Game/NewGameEleSet'
+// import NewGameEl from './components/Game/NewGameEleSet'
 import "./App.css"
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path='/rules' element={<Rules />}/>
         <Route path='/about' element={<About />}/>
         <Route path='*' element={<ErrorPage />}/>
-        <Route path='newgame11' element={<NewGameEl />}/>
+        {/* <Route path='newgame11' element={<NewGameEl />}/> */}
       </Routes>
       <Footer />
     </>

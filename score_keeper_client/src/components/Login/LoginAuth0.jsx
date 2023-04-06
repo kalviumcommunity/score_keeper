@@ -48,7 +48,7 @@ export default function LoginAuth0() {
   }, [alert]);
 
   if(isLoading){
-    return <img className="loading-nav" src={loai} alt="" />
+    return <img src={loai} style={{marginRight:"3vw"}} alt="" className="user-pic" />
   }
 
   return (
@@ -72,12 +72,8 @@ export default function LoginAuth0() {
         <div className="logoutAlert" ref={authDataRef}>
           <div className="alert-text" style={{color: "white"}}>Are you sure you want to logout?</div>
           <div className="alert-btn-container">
-            <button className="no" onClick={() => setAlert(!alert)}>
-              No
-            </button>
-            <button className="yes" onClick={handleLogout}>
-              Yes
-            </button>
+            <button className="no" onClick={() => setAlert(!alert)}>No</button>
+            <button className="yes" onClick={handleLogout}>Yes</button>
           </div>
         </div>
       )}

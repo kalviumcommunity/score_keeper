@@ -594,9 +594,10 @@ input{
 }
 
 .loading{
-  height: 67vh;
+  height: 65vh;
   width: 35vw;
   background-color: transparent;
+  margin-top: -1vh;
 }
 
 @media screen and (max-width: 650px) {
@@ -827,7 +828,8 @@ input{
     width: 85vw;
   }
   .loading{
-    width: 85vw;
+    width: 55vw;
+    margin: auto;
   }
   .loading-nav{
     height: 7vh;
