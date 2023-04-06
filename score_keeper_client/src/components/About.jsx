@@ -1,5 +1,5 @@
 import React from 'react'
-import photo from '../Pictures/My_photo.jpeg'
+import photo from './Pictures/My_photo.jpeg'
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { FaHtml5 } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';

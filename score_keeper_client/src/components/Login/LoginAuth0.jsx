@@ -1,19 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Login.css";
+import loai from "../Pictures/Loaing.gif"
+
 
 export default function LoginAuth0() {
-  const { loginWithRedirect, user, isAuthenticated,  logout } =
+  const { loginWithRedirect, user, isAuthenticated,isLoading,  logout } =
     useAuth0();
 
   const [alert, setAlert] = useState(false);
   const authDataRef = useRef(null);
+
   const sendUserData = async () => {
     try {
       const res = await fetch(process.env.REACT_APP_SERVER_URL + "/login", {
         method: "POST",
-        
-        
       });
       const data = await res.json();
 
@@ -46,6 +47,10 @@ export default function LoginAuth0() {
     };
   }, [alert]);
 
+  if(isLoading){
+    return <img src={loai} style={{marginRight:"3vw"}} alt="" className="user-pic" />
+  }
+
   return (
     <div className="user-data">
       {isAuthenticated ? (
@@ -57,7 +62,7 @@ export default function LoginAuth0() {
         </div>
       ) : (
         <div
-          style={{backgroundColor: "black", height:"fit-content"}}
+          style={{backgroundColor: "transparent", height:"fit-content"}}
           onClick={loginWithRedirect}
         >
           <div className="login" style={{padding:"10px 30px"}}>Login</div>
@@ -67,12 +72,8 @@ export default function LoginAuth0() {
         <div className="logoutAlert" ref={authDataRef}>
           <div className="alert-text" style={{color: "white"}}>Are you sure you want to logout?</div>
           <div className="alert-btn-container">
-            <button className="no" onClick={() => setAlert(!alert)}>
-              No
-            </button>
-            <button className="yes" onClick={handleLogout}>
-              Yes
-            </button>
+            <button className="no" onClick={() => setAlert(!alert)}>No</button>
+            <button className="yes" onClick={handleLogout}>Yes</button>
           </div>
         </div>
       )}

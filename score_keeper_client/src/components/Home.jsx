@@ -1,14 +1,12 @@
 import React from 'react'
-import badminton from "../Pictures/pngegg.png"
+import badminton from "./Pictures/pngegg.png"
 import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from './Login/LoginButton';
 
 function Home() {
   const {isAuthenticated} = useAuth0();
 
-    const alertfunc = ()=>{
-      alert("Login To Continue!")
-    }
   return (
     <div className="home">
         <div className='picture'>
@@ -21,7 +19,7 @@ function Home() {
             <div className='buttons'>
               {isAuthenticated ?
                 <Link to={'/gamepage'}><button className='login' style={{padding:"10px 30px",boxShadow:"3px 3px 0px #000, 0px 0px 60px #858585"}}>Start</button></Link>:
-                <a href='/'><button className='login' onClick={alertfunc} style={{padding:"10px 30px",boxShadow:"3px 3px 0px #000, 0px 0px 60px #858585"}}>Start</button></a>}
+                <LoginButton style={{backgroundColor:"transperent"}}></LoginButton>}
             </div>
         </div>
     </div>
