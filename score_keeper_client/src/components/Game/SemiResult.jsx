@@ -19,7 +19,7 @@ function SemiResult() {
   }
   else if(isAuthenticated){
     console.log('Signed In')
-    console.log(user)
+    // console.log(user)
   }
 
   const funct = ()=>{
@@ -45,8 +45,9 @@ function SemiResult() {
     e.preventDefault();
     const authId = user.sub;
     
+    console.log("Test Domain: ",process.env.REACT_APP_SUBMIT_URI)
     fetch(process.env.REACT_APP_SUBMIT_URI, {
-    
+      
     // Adding method type
     method: "POST",
      

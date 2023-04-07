@@ -14,7 +14,7 @@ function OldGame() {
   useEffect(() => {
 
     if(user){
-    console.log('effec',user)
+    // console.log('effec',user)
 
     fetch(process.env.REACT_APP_FETCH_URI+`/${user.sub}`)
       .then((response) => response.json())
