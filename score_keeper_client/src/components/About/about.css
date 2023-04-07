@@ -1,0 +1,313 @@
+#intro{
+    margin-left:8%;
+    height:99.8vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.about-heading{
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: large;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+.about-name{
+    color: white;
+    font-size: xxx-large;
+    background-color: transparent;
+    margin: 0px;
+}
+
+.sub-heading{
+    color: white;
+    font-size: x-large;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.about-para{
+    color: #fcfc;
+    width: 75%;
+    letter-spacing: 1px;
+    font-size: large;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.news-latter{
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.about-input{
+    width: 40%;
+    display: inline-block;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #f9004d;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+}
+
+.about-login{
+	border: 2px solid black;
+    position:relative;
+	padding: 10px 10px;
+	border-radius: 30px;
+	background-color: #f9004d;
+	color: black;
+    transition: .2s;
+    font-size: large;
+    margin-left: -20.5%;
+    width: 20%;
+    margin-top: 1%;
+    font-size: small;
+}
+.about-login:hover{
+	background-color: black;
+	border: 2px solid #f9004d;
+    color: white;
+	cursor: pointer;
+}
+
+.about{
+    height: 87vh;
+    background-color: black;
+    display: flex;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.about-photo{
+    width: 40%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-pic{
+    width: 55%;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+
+.about-text{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    justify-content: center;
+    margin: auto;
+}
+
+.about-me{
+    background-color: black;
+    color: white;
+    font-size: xxx-large;
+    margin: 0px;
+}
+
+.about-myself{
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
+
+.about-my{
+    background-color: black;
+    color: #fcfc;
+    font-size: large;
+    width: 90%;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#skills{
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    border-bottom: 3px solid white;
+
+}
+.my-exp{
+    text-align: center;
+    font-size: xxx-large;
+    color: white;
+    margin: 4%;
+    /* margin-bottom: 10%; */
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.content{
+    background-color: black;
+    width: 30%;
+    padding: 4px 5px;
+    border-radius: 40px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-photo{
+    background-color: black;
+    color: #f9004d;
+    width: 8vh;
+    height: 7vh;
+    border: 2px solid #f9004d;
+    border-radius: 40%;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+.content-heading{
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    margin: 25px 0px 10px 0px;
+}
+
+.pra{
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.praa{
+    background-color: black;
+    color: #fcfc;
+    font-size: large;
+    font-weight: bold;
+    height: fit-content;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1050px){
+    .about{
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        padding: 13% 0%;
+    }
+    .about-text{
+        width: 75%;
+    }
+    .about-photo{
+        margin-bottom: 5%;
+    }
+    .about-me{
+        text-align: center;
+    }
+    .about-myself{
+        text-align: center;
+    }
+    .about-my{
+        width: 100%;
+        text-align: center;
+    }
+    #skills{
+        height: fit-content;
+        padding: 10%;
+    }
+    .container{
+        flex-direction: column;       
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        width: 75%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .about-heading{
+        font-size: medium;
+    }
+    .about-name{
+        font-size: xx-large;
+    }
+    .sub-heading{
+        font-size: large;
+    }
+    .about-para{
+        font-size: medium;
+        width: 85%;
+    }
+    .about-input{
+        width: 50%;
+    }
+    .about-login{
+        width: 30%;
+        margin-left: -34.5%;
+    }
+    .about{
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        padding: 13% 0%;
+    }
+    .about-photo{
+        margin-bottom: 5%;
+    }
+    .about-text{
+        width: 85%;
+    }
+    .about-me{
+        text-align: center;
+        font-size: xx-large;
+    }
+    .about-myself{
+        text-align: center;
+        font-size: larger;
+    }
+    .about-my{
+        width: 100%;
+        font-size: medium;
+    }
+    #skills{
+        height: fit-content;
+        padding: 4%;
+    }
+    .container{
+        flex-direction: column;       
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        width: 93%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .my-exp{
+        font-size: xx-large;
+    }
+}
