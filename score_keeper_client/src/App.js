@@ -8,7 +8,7 @@ import NewGame from './components/Game/NewGameTOSet'
 import SemiResult from './components/Game/SemiResult'
 import Rules from './components/Rules'
 import OldGame from './components/Game/OldGame'
-import About from './components/About'
+import About from './components/About/About'
 import Footer from './components/Footer'
 // import NewGameEl from './components/Game/NewGameEleSet'
 import "./App.css"

@@ -11,25 +11,6 @@ export default function LoginAuth0() {
   const [alert, setAlert] = useState(false);
   const authDataRef = useRef(null);
 
-  const sendUserData = async () => {
-    try {
-      const res = await fetch(process.env.REACT_APP_SERVER_URL + "/login", {
-        method: "POST",
-      });
-      const data = await res.json();
-
-      if (data.status === 422 || data.status === 500) {
-        alert(data.error);
-      } else {
-        console.log(data.message);
-      }
-    } catch (err) {
-      console.log("An error occured: " + err);
-    }
-  };
-
-  if (isAuthenticated) sendUserData();
-
   function handleLogout() {
     logout({ logoutParams: { returnTo: window.location.origin } });
   }

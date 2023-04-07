@@ -29,7 +29,7 @@ function Footer() {
               <FaTwitter className="login" style={{ backgroundColor: "black", color:"white" }} />
             </Link>
         </div>
-        <h2 style={{textAlign:"right", color:"#292929", backgroundColor:"black"}}>
+        <h2 style={{textAlign:"right", color:"#292929", backgroundColor:"black",fontSize:"large"}}>
           © CopyRight by Score Keeper
         </h2>
       </footer>
