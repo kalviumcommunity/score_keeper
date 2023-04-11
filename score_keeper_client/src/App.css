@@ -36,6 +36,17 @@ a {
   border-bottom: 1px solid white;
 }
 
+.err-content{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 99.9vh;
+  border-bottom: 1px solid white;
+}
+
+
 .er{
   font-size: 300%;
   color: white;
@@ -861,4 +872,8 @@ input{
   margin-right: 3%;
 	padding: 3px 3px;
 	border: 2px solid #f9004d;
+}
+.Spline{
+  height:100vh;
+  width: 100vw;
 }

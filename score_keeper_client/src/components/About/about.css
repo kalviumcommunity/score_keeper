@@ -108,7 +108,7 @@
     background-color: black;
     color: white;
     font-size: xxx-large;
-    margin: 0px;
+    margin: auto;
 }
 
 .about-myself{
@@ -117,13 +117,14 @@
     font-size: x-large;
     margin-top: 17px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .about-my{
     background-color: black;
     color: #fcfc;
     font-size: large;
-    width: 90%;
+    width: 100%;
     text-align: justify;
     margin-bottom: 30px;
 }
