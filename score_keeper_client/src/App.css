@@ -11,6 +11,7 @@
   height: 10vh;
   width: auto;
   margin-left: 2%;
+  background-color: transparent;
 }
 
 #white-text{
@@ -109,7 +110,7 @@ span{
 }
 
 .user-data{
-  background-color: transparent;
+  background-color: black;
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -131,7 +132,7 @@ span{
 .user-pic{
   height: 7vh;
   width: auto;
-  background-color: transparent;
+  background-color: black;
   border-radius: 50px;
   background-color: #181818;
   border: solid #f9004d;
