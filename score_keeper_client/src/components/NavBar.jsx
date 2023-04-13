@@ -57,9 +57,9 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"space-evenly", backgroundColor:"black"} }}>
-            <Link to={'/'}><div onTouchMove={{color:"red"}}>HOME</div></Link>
-            <Link to={'/about'}><div>ABOUT</div></Link>
-            <Link to={'/rules'}><div>RULES</div></Link>
+            <Link to={'/'} style={{textShadow: "2px 2px #ff0000"}}>HOME</Link>
+            <Link to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
+            <Link to={'/rules'} style={{textShadow: "2px 2px #ff0000"}}>RULES</Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
