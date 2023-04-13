@@ -110,7 +110,7 @@ span{
 }
 
 .user-data{
-  background-color: black;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   width: fit-content;
