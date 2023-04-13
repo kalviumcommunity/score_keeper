@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
-import NavBar from './components/NavBar'
+// import NavBar from './components/NavBar'
 import Home from './components/Home'
 import GamePage from './components/Game/GamePage'
 import ErrorPage from './components/ErrorPage'
@@ -11,12 +11,14 @@ import OldGame from './components/Game/OldGame'
 import About from './components/About/About'
 import Footer from './components/Footer'
 // import NewGameEl from './components/Game/NewGameEleSet'
+import ResponsiveAppBar from './components/NavBar'
 import "./App.css"
 
 function App() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
+      <ResponsiveAppBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/gamepage' element={<GamePage/>}/>
@@ -26,6 +28,8 @@ function App() {
         <Route path='/rules' element={<Rules />}/>
         <Route path='/about' element={<About />}/>
         <Route path='*' element={<ErrorPage />}/>
+        {/* <Route path='test' element={<ResponsiveAppBar />}/> */}
+
         {/* <Route path='newgame11' element={<NewGameEl />}/> */}
       </Routes>
       <Footer />

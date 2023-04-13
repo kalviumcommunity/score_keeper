@@ -19,7 +19,7 @@ function Home() {
             <div className='buttons'>
               {isAuthenticated ?
                 <Link to={'/gamepage'}><button className='login' style={{padding:"10px 30px",boxShadow:"3px 3px 0px #000, 0px 0px 60px #858585"}}>Start</button></Link>:
-                <LoginButton style={{backgroundColor:"transperent"}}></LoginButton>}
+                <LoginButton></LoginButton>}
             </div>
         </div>
     </div>
