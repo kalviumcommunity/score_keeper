@@ -54,7 +54,12 @@ app.post("/submitGameData", async (req, res) => {
 });
 
 app.get("/getAllGameData", async (req, res) => {
-  const gameData = await GameData.find()
+  const gameData = await GameData.aggregate([
+    {
+      $match: {}
+    }
+  ]);
+  
   res.status(200).send(gameData)
 })
 
