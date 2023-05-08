@@ -8,7 +8,7 @@ require("dotenv").config();
 // Create an Express app
 const app = express(
   {cors:{origin:"*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type"],
   credentials: true}}
 );
