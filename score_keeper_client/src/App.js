@@ -12,6 +12,7 @@ import About from './components/About/About'
 import Footer from './components/Footer'
 // import NewGameEl from './components/Game/NewGameEleSet'
 import ResponsiveAppBar from './components/NavBar'
+import News from './components/News'
 import "./App.css"
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/semiresult' element={<SemiResult />}/>
         <Route path='/rules' element={<Rules />}/>
         <Route path='/about' element={<About />}/>
+        <Route path='/news' element={<News />}/>
         <Route path='*' element={<ErrorPage />}/>
         {/* <Route path='test' element={<ResponsiveAppBar />}/> */}
 
