@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
 import loai from "./Pictures/badminton.gif"
-
+import '../App.css'
 
 function News() {
 
@@ -13,7 +13,8 @@ function News() {
     fetch(process.env.REACT_APP_NEWS_URL)
       .then((response) => response.json())
       .then((data) => {
-        setData(data.articles)
+        setData(data[0].articles)
+        // console.log(data)
         setLoading(false);
       })
       .catch((error) => console.log(error));
@@ -23,12 +24,12 @@ function News() {
   return (
     <>
       <div className="news-page">
-        <h1 className='news-title' style={{textAlign:"center", marginTop:"14vh"}}><span style={{fontSize:"2.5rem"}}>Trending News</span></h1>
+        <h1 className='news-title' style={{textAlign:"center", marginTop:"16vh"}}><span style={{fontSize:"2.5rem"}}>Trending News</span></h1>
         <div className="news-component">
             <div className="news-modal"></div>
             <div className="news-page-data">
             {loading?(
-              <div className="loading" style={{width:"40%", height:"80vh", marginLeft:"30%", marginRight:"30%"}}>
+              <div className="loading" style={{width:"auto", height:"75vh", margin:"auto", display:"flex", flexDirection:"column", alignItems:"center"}}>
                 <img className="loading" src={loai} alt="" />
                 <h3 style={{marginTop:"20px", textAlign:"center", color:"white"}}>Loading Your News Details...</h3>
               </div>
@@ -39,11 +40,10 @@ function News() {
                     data.map((data, i) => {
                         return (
                         <div
-                            className="login"
+                            className="login-news"
                             style={{
-                            marginBottom: "1.5vh",
                             width: "90%",
-                            marginLeft: "5%",
+                            margin: "1.5vh auto",
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "space-between"
@@ -51,16 +51,21 @@ function News() {
                             key={i}
                             onClick={() => window.open(data.url)}
                         >
-                            <img
-                            style={{ width: "20%", marginRight: "2%", borderRadius: "25px" }}
-                            src={data.urlToImage}
+                            <img className='news-img'
+                            style={{ width: "20%", margin:"auto", borderRadius: "25px" }}
+                            // src={data.urlToImage}
+                            src={
+                              data.urlToImage
+                                  ?data.urlToImage
+                                  :"https://www.kreedon.com/wp-content/uploads/2018/11/badminton-grass-racket-115016-696x464.jpg"
+                              }
                             alt=""
                             />
-                            <div style={{ backgroundColor: "transparent" }}>
+                            <div style={{ backgroundColor: "transparent", width:"100%" }}>
                             <h2 style={{ backgroundColor: "transparent", textAlign: "center" }}>
                                 {data.title}
                             </h2>
-                            <p style={{ backgroundColor: "transparent" }}>{data.description}</p>
+                            <p style={{ backgroundColor: "transparent", textAlign: "center" }}>{data.description}</p>
                             </div>
                         </div>
                         );

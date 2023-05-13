@@ -14,9 +14,10 @@ function Footer() {
     <>
       <footer style={{display:"flex", flexDirection:"column", marginTop:"", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
         <div style={{width:"80vw", display:"flex", justifyContent:"space-evenly", marginTop:"5%", backgroundColor:"black"}}>
-            <Link to={"/"}><span>Home</span></Link>
-            <Link to={"/about"}><span>About</span></Link>
-            <Link to={"/rules"}><span>Rules</span></Link>
+            <Link to={"/"} onClick={() => window.scrollTo(0, 0)}><span>Home</span></Link>
+            <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}><span>About</span></Link>
+            <Link to={"/rules"} onClick={() => window.scrollTo(0, 0)}><span>Rules</span></Link>
+            <Link to={"/news"} onClick={() => window.scrollTo(0, 0)}><span>News</span></Link>
         </div>
         <div style={{width:"50vw", display:"flex", justifyContent:"space-evenly", marginTop:"5%", backgroundColor:"black"}}>
             <Link to={"https://www.linkedin.com/in/chandan-sm-a7507a256"} target="_blank">
