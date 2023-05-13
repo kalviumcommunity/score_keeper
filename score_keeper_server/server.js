@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const GameData=require("./modals/modal")
 require("dotenv").config();
-const News = require("./modals/modal");
+const News = require("./modals/news");
 
 
 // Create an Express app
