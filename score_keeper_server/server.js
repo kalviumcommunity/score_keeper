@@ -41,7 +41,7 @@ app.post("/submitGameData", async (req, res) => {
       player2,
       score1,
       score2,
-      winText,
+      winText
     });
 
     // Save the game data to the database
