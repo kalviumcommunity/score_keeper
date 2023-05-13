@@ -60,6 +60,7 @@ function ResponsiveAppBar() {
             <Link to={'/'} style={{textShadow: "2px 2px #ff0000"}}>HOME</Link>
             <Link to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
             <Link to={'/rules'} style={{textShadow: "2px 2px #ff0000"}}>RULES</Link>
+            <Link to={'/news'} style={{textShadow: "2px 2px #ff0000"}}>NEWS</Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
