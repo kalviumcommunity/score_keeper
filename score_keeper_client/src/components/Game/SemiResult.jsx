@@ -1,4 +1,3 @@
-import Court from "../Pictures/court.png";
 import{useEffect, useState} from 'react'
 import {useAuth0} from '@auth0/auth0-react'
 
@@ -84,7 +83,7 @@ function SemiResult() {
       <div className="main-part-up-sm">
         <div className="score-1">{player1Score}</div>
         <div>
-          <img className="b-court" src={Court} alt="Badminton-Court" />
+          <img className="b-court" src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125671/court.8d55b1d6ed87b462129c_vjcx7n.png' alt="Badminton-Court" />
         </div>
         <div className="score-2">{player2Score}</div>
       </div>

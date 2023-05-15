@@ -1,5 +1,4 @@
 import React from 'react'
-import badminton from "./Pictures/pngegg.png"
 import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from './Login/LoginButton';
@@ -10,10 +9,10 @@ function Home() {
   return (
     <div className="home">
         <div className='picture'>
-            <img className='pic' src={badminton} alt="react-app" />
+            <img className='pic' src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125179/pngegg.61e13af42a8dafef9817_bjry7s.png' alt="react-app" />
         </div>
         <div className='home-content'>
-            <h1 className='heading'>Hey User !!</h1>
+            <h1 className='heading' style={{fontSize:"-webkit-xxx-large", textShadow: "0px 0px 90px #000, 0px 0px 35px #858585"}}>Hey User !!</h1>
             <h5 className='sub-heading'>Beyond<span className='s-h'>, Play </span>&  Court</h5>
             <h3 className='heading-content'>The beauty of the game is strength stamina and technique and when you shorten the game, technique goes for a toss and the quality of badminton will surely go down in this system.</h3>
             <div className='buttons'>

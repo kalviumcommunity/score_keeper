@@ -1,5 +1,4 @@
 import React from "react";
-import badminton from "../Pictures/pngegg.png";
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import loai from "../Pictures/Loaing.gif"
@@ -30,7 +29,7 @@ function OldGame() {
     
       <div className="game-page">
         <div className="picture-gp">
-          <img className="pic" src={badminton} alt="react-app" />
+          <img className="pic" src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125179/pngegg.61e13af42a8dafef9817_bjry7s.png' alt="react-app" />
         </div>
         <div className="old-gamepage-content">
           <h1 className="old-gamepage-heading">Played Games</h1>

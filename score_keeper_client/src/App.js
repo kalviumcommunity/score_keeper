@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
-// import NavBar from './components/NavBar'
 import Home from './components/Home'
 import GamePage from './components/Game/GamePage'
 import ErrorPage from './components/ErrorPage'
@@ -10,9 +9,11 @@ import Rules from './components/Rules'
 import OldGame from './components/Game/OldGame'
 import About from './components/About/About'
 import Footer from './components/Footer'
-// import NewGameEl from './components/Game/NewGameEleSet'
 import ResponsiveAppBar from './components/NavBar'
 import News from './components/News'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsConditions from './components/Terms&Conditions'
+import CookiePolicy from './components/CookiePolicy'
 import "./App.css"
 
 function App() {
@@ -29,10 +30,11 @@ function App() {
         <Route path='/rules' element={<Rules />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/news' element={<News />}/>
+        <Route path='/privacypolicy' element={<PrivacyPolicy />}/>
+        <Route path='/t&c' element={<TermsConditions />}/>
+        <Route path='/cookiepolicy' element={<CookiePolicy />}/>
         <Route path='*' element={<ErrorPage />}/>
-        {/* <Route path='test' element={<ResponsiveAppBar />}/> */}
 
-        {/* <Route path='newgame11' element={<NewGameEl />}/> */}
       </Routes>
       <Footer />
     </>

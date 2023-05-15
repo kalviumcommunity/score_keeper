@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6e13b98.css",
-    "main.js": "/static/js/main.46fff45c.js",
+    "main.css": "/static/css/main.2647cdaa.css",
+    "main.js": "/static/js/main.310cd079.js",
     "static/js/227.6584db0f.chunk.js": "/static/js/227.6584db0f.chunk.js",
     "static/js/526.09902519.chunk.js": "/static/js/526.09902519.chunk.js",
     "static/js/232.b315cff4.chunk.js": "/static/js/232.b315cff4.chunk.js",
     "static/js/237.d77df342.chunk.js": "/static/js/237.d77df342.chunk.js",
-    "static/media/pngegg.png": "/static/media/pngegg.61e13af42a8dafef9817.png",
     "static/media/Logo.png": "/static/media/Logo.925e7b9b97bc7f17a67c.png",
     "static/media/Loaing.gif": "/static/media/Loaing.5c97f1e3f9c76f0fded5.gif",
-    "static/media/My_photo.jpeg": "/static/media/My_photo.579e8694ea0296b452dd.jpeg",
     "static/media/badminton.gif": "/static/media/badminton.e792f05cec58e2058c6f.gif",
-    "static/media/court.png": "/static/media/court.8d55b1d6ed87b462129c.png",
     "index.html": "/index.html",
-    "main.a6e13b98.css.map": "/static/css/main.a6e13b98.css.map",
-    "main.46fff45c.js.map": "/static/js/main.46fff45c.js.map",
+    "main.2647cdaa.css.map": "/static/css/main.2647cdaa.css.map",
+    "main.310cd079.js.map": "/static/js/main.310cd079.js.map",
     "227.6584db0f.chunk.js.map": "/static/js/227.6584db0f.chunk.js.map",
     "526.09902519.chunk.js.map": "/static/js/526.09902519.chunk.js.map",
     "232.b315cff4.chunk.js.map": "/static/js/232.b315cff4.chunk.js.map",
     "237.d77df342.chunk.js.map": "/static/js/237.d77df342.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6e13b98.css",
-    "static/js/main.46fff45c.js"
+    "static/css/main.2647cdaa.css",
+    "static/js/main.310cd079.js"
   ]
 }

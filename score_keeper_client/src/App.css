@@ -243,12 +243,12 @@ span{
 }
 
 .heading{
-  margin-top: 10%;
+  margin-top: 8%;
   text-align: left;
-  font-size: -webkit-xxx-large;
+  font-size: xxx-large;
   background-color: transparent;
   color: white;
-  text-shadow: 0px 0px 90px #000, 0px 0px 35px #858585;
+  text-shadow: 0px 0px 90px #000, 0px 0px 10px #858585;
 
 }
 
@@ -263,12 +263,13 @@ span{
 
 
 .heading-content{
-  text-align: justify;
+  text-align: left;
   font-size: large;
   margin-right: 4.5%;
   background-color: transparent;
   color: #fcfc;
   margin-top: -2%;
+  font-weight: bold;
 }
 
 .buttons{

@@ -1,5 +1,4 @@
 import React from 'react'
-import photo from '../Pictures/My_photo.jpeg'
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { FaHtml5 } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
@@ -34,7 +33,7 @@ function About() {
 
         <section className="about">
             <div className='about-photo'>
-                <img src={photo} className='about-pic' alt="" />
+                <img src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125552/My_photo.579e8694ea0296b452dd_dq9puy.jpg' className='about-pic' alt="" />
             </div>
             <div className="about-text" >			
                 <h1 className='about-me'>About Me !!</h1>

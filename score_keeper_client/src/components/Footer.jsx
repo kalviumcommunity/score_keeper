@@ -18,6 +18,9 @@ function Footer() {
             <Link to={"/about"} onClick={() => window.scrollTo(0, 0)}><span>About</span></Link>
             <Link to={"/rules"} onClick={() => window.scrollTo(0, 0)}><span>Rules</span></Link>
             <Link to={"/news"} onClick={() => window.scrollTo(0, 0)}><span>News</span></Link>
+            <Link to={"/privacypolicy"} onClick={() => window.scrollTo(0, 0)}><span>Privacy Policy</span></Link>
+            <Link to={"/t&c"} onClick={() => window.scrollTo(0, 0)}><span>T&C</span></Link>
+            <Link to={"/cookiepolicy"} onClick={() => window.scrollTo(0, 0)}><span>Cookie Policy</span></Link>
         </div>
         <div style={{width:"50vw", display:"flex", justifyContent:"space-evenly", marginTop:"5%", backgroundColor:"black"}}>
             <Link to={"https://www.linkedin.com/in/chandan-sm-a7507a256"} target="_blank">

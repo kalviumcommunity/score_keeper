@@ -1,6 +1,5 @@
 // Import required modules
 import React, { useState, useEffect } from "react";
-import Court from "../Pictures/court.png";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
@@ -115,7 +114,7 @@ return (
             
             {/* badminton court image */}
             <div>
-                <img className="b-court" src={Court} alt="Badminton-Court" />
+                <img className="b-court" src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125671/court.8d55b1d6ed87b462129c_vjcx7n.png' alt="Badminton-Court" />
             </div>
             
             {/* score display for player 2 */}
