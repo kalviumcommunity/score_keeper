@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const GameData=require("./modals/modal")
 require("dotenv").config();
+const News = require("./modals/news");
+
 
 // Create an Express app
 const app = express(
@@ -39,7 +41,7 @@ app.post("/submitGameData", async (req, res) => {
       player2,
       score1,
       score2,
-      winText,
+      winText
     });
 
     // Save the game data to the database
@@ -101,6 +103,37 @@ app.delete("/singleGameData/:id", async (req, res) => {
   }
 
   res.status(200).json(gameData)
+})
+
+app.post("/news", async (req, res) => {
+  try {
+    // Extract news data from the request body
+    const { author, title, description, url, urlToImage, publishedAt, content } = req.body;
+
+    const newsSchema = new News({
+      author,
+      title,
+      description,
+      url,
+      urlToImage,
+      publishedAt,
+      content
+    });
+
+    // Save the news data to the database
+    await newsSchema.save();
+
+    // Send a success response
+    res.status(200).send("News data saved successfully");
+  } catch (err) {
+    // Send an error response if something went wrong
+    res.status(500).send("Error saving news data: " + err.message);
+  }
+});
+
+app.get("/news", async (req, res) => {
+  const newsData = await News.find()
+  res.status(200).send(newsData)
 })
 
 // Start the server

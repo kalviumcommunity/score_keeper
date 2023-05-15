@@ -617,6 +617,25 @@ input{
   margin-top: -1vh;
 }
 
+.login-news{
+	border: 2px solid #f9004d;
+  position:relative;
+	padding: 10px 10px;
+	border-radius: 30px;
+	background-color: #f9004d;
+	color: black;
+  transition: .2s;
+  font-size: large;
+  margin-right: 0%;
+}
+.login-news:hover{
+	background-color: black;
+	border: 2px solid #f9004d;
+  color: white;
+	cursor: pointer;
+}
+
+
 @media screen and (max-width: 650px) {
   .navbar{
     height: 11vh;
@@ -788,9 +807,16 @@ input{
     height: 40vh;
     margin-top: 6vh;
   }
+  .login-news{
+    flex-direction: column !important;
+    width: 80% !important;
+  }
+  .news-img{
+    width: 100% !important;
+  }
 }
 
-@media screen and (min-width: 650px) and (max-width: 1050px){
+@media screen and (min-width: 650px) and (max-width: 1000px){
   .pic{
     margin-top: 30vh;
   }
@@ -854,6 +880,12 @@ input{
     margin-right: 3%;
     padding: 1px 1px;
     border: 2px solid #f9004d;
+  }
+  .login-news{
+    flex-direction: column !important;
+  }
+  .news-img{
+    width: 100% !important;
   }
 }
 
