@@ -57,10 +57,10 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"space-evenly", backgroundColor:"black"} }}>
-            <Link onClick={() => window.scrollTo(0, 0)} to={'/'} style={{textShadow: "2px 2px #ff0000"}}>HOME</Link>
-            <Link onClick={() => window.scrollTo(0, 0)} to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/rules'} style={{textShadow: "2px 2px #ff0000"}}>RULES</Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/news'} style={{textShadow: "2px 2px #ff0000"}}>NEWS</Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/shop'} style={{textShadow: "2px 2px #ff0000"}}>SHOP</Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

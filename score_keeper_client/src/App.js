@@ -14,6 +14,9 @@ import News from './components/News'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import TermsConditions from './components/Terms&Conditions'
 import CookiePolicy from './components/CookiePolicy'
+import AccessibilityPolicy from './components/AccessibilityPolicy'
+import FAQ from './components/FAQ'
+import UpComing from './components/UpComing'
 import "./App.css"
 
 function App() {
@@ -33,6 +36,9 @@ function App() {
         <Route path='/privacypolicy' element={<PrivacyPolicy />}/>
         <Route path='/t&c' element={<TermsConditions />}/>
         <Route path='/cookiepolicy' element={<CookiePolicy />}/>
+        <Route path='/accessibilitypolicy' element={<AccessibilityPolicy />}/>
+        <Route path='/faq' element={<FAQ />}/>
+        <Route path='/shop' element={<UpComing />}/>
         <Route path='*' element={<ErrorPage />}/>
 
       </Routes>
