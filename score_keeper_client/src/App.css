@@ -815,6 +815,24 @@ input{
   .news-img{
     width: 100% !important;
   }
+  .footer{
+    flex-direction: column-reverse !important;
+  }
+  .logo-footer{
+    width: 90% !important;
+  }
+  .logo-footer2{
+    width: 80% !important;
+  }
+  .links{
+    font-size: medium !important;
+  }
+  .logo-text{
+    display: none !important;
+  }
+  .logo-text2{
+    display: flex !important;
+  }
 }
 
 @media screen and (min-width: 650px) and (max-width: 1000px){
