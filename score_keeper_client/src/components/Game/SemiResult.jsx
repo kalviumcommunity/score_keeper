@@ -3,7 +3,7 @@ import {useAuth0} from '@auth0/auth0-react'
 
 
 function SemiResult() {
-  const {user, isLoading, isAuthenticated} = useAuth0()
+  const {user, isAuthenticated} = useAuth0()
   const [winner, setWinner ] = useState('');
   const [winnerScore, setWinnerScore ] = useState('');
   const [looserScore, setLooserScore] =useState('');
@@ -13,13 +13,7 @@ function SemiResult() {
   let player2Name = sessionStorage.getItem("player2Name");
   let player1Score = sessionStorage.getItem("player1Score");
   let player2Score = sessionStorage.getItem("player2Score");
-  if(isLoading){
-    console.log('Loading')
-  }
-  else if(isAuthenticated){
-    console.log('Signed In')
-    // console.log(user)
-  }
+  
 
   const funct = ()=>{
     if(player1Score>player2Score){
@@ -98,12 +92,21 @@ function SemiResult() {
             <div className="p-2-details-score">{player2Score}</div>
           </div>
         </div>
+        {isAuthenticated ?(
+          <>
         <div className="end">
           <h1 className="win-text">
             {winner} wins the game with a score of {winnerScore} / {looserScore}
           </h1>
           <button className="save-game" onClick={(e)=>save(e)}>Save Game</button>
         </div>
+          </>
+            ):(
+              <>
+              <h4 style={{color:"gray", margin:"0vh", marginTop:"1vh"}}>OOP'S, You're Not Loged IN......</h4>
+              <h5 style={{color:"gray", margin:"0vh"}}>Please LogIn and Play again to save the Scores !!</h5>
+              </>
+            )}
       </div>
     </div>
   );

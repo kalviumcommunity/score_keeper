@@ -364,8 +364,8 @@ span{
   justify-content: center;
   align-items: center;
   font-size: xx-large;
-  border-bottom: solid white;
-  height: 99.9vh;
+  border-bottom: 3px solid white;
+  height: 99vh;
 }
 
 #gametitle-re{

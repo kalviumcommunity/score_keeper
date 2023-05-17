@@ -26,7 +26,7 @@ function App() {
       <ResponsiveAppBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/gamepage' element={<GamePage/>}/>
+        <Route path='/game' element={<GamePage/>}/>
         <Route path='/newgame21' element={<NewGame/>}/>
         <Route path='/oldgames' element={<OldGame/>}/>
         <Route path='/semiresult' element={<SemiResult />}/>
