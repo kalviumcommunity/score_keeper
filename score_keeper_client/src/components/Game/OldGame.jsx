@@ -2,13 +2,14 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import loai from "../Pictures/Loaing.gif"
+import LoginButton from "../Login/LoginButton";
 
 function OldGame() {
   // Make a GET request to your backend API
   const [data, setData] = useState([]);
   const { user } = useAuth0();
   const [loading, setLoading] = useState(true)
-
+  const { isAuthenticated } = useAuth0();
 
   useEffect(() => {
 
@@ -35,6 +36,8 @@ function OldGame() {
           <h1 className="old-gamepage-heading">Played Games</h1>
 
           <div className="old-gamepage-data">
+            {isAuthenticated?(
+              <>
             {loading?(
               <div className="loading">
                 <img className="loading" src={loai} alt="" />
@@ -91,6 +94,15 @@ function OldGame() {
               </div>
             );
           })}
+              </>
+            )}
+            </>
+            ):(
+              <>
+                <div className="loading" style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor:"#e1e1e1"}}>
+                  <h3 style={{ backgroundColor:"transparent", fontSize:"xx-large", width:"60%" , textAlign:"center"}}>Login To view Played Games</h3>
+                  <LoginButton style={{margin:"auto"}}/>
+                </div>
               </>
             )}
           </div>

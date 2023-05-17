@@ -22,6 +22,7 @@ function ResponsiveAppBar() {
             noWrap
             component="a"
             href="/"
+            onClick={() => window.scrollTo(0, 0)}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -57,10 +58,11 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"space-evenly", backgroundColor:"black"} }}>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/game'} style={{textShadow: "2px 2px #ff0000"}}>PLAY</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/rules'} style={{textShadow: "2px 2px #ff0000"}}>RULES</Link>
-            <Link onClick={() => window.scrollTo(0, 0)} to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/news'} style={{textShadow: "2px 2px #ff0000"}}>NEWS</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/shop'} style={{textShadow: "2px 2px #ff0000"}}>SHOP</Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/about'} style={{textShadow: "2px 2px #ff0000"}}>ABOUT</Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
