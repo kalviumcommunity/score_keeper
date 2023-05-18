@@ -46,6 +46,7 @@ function Footer() {
                 <li style={{color:"white", backgroundColor:"transparent", marginBottom:".6vh"}}><Link className="links" to={"/about"} onClick={() => window.scrollTo(0, 0)} style={{fontSize:"20px"}}>About</Link></li>
                 <li style={{color:"white", backgroundColor:"transparent", marginBottom:".6vh"}}><Link className="links" to={"/rules"} onClick={() => window.scrollTo(0, 0)} style={{fontSize:"20px"}}>Rules</Link></li>
                 <li style={{color:"white", backgroundColor:"transparent", marginBottom:".6vh"}}><Link className="links" to={"/news"} onClick={() => window.scrollTo(0, 0)} style={{fontSize:"20px"}}>News</Link></li>
+                <li style={{color:"white", backgroundColor:"transparent", marginBottom:".6vh"}}><Link className="links" to={"/shop"} onClick={() => window.scrollTo(0, 0)} style={{fontSize:"20px"}}>Shop</Link></li>
               </div>
               <div style={{backgroundColor:"black",width:"50%", display:"flex",flexDirection:"column", alignItems:"left"}}>
                 <h2 style={{backgroundColor:"transparent"}}><span className="links">Policies and FAQ's</span></h2>
