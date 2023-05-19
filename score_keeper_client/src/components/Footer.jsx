@@ -14,7 +14,7 @@ function Footer() {
             <p style={{marginRight:"0%",width:"80%" ,textAlign:"center", marginTop:"1vh",fontSize:"large", color:"white", backgroundColor:"transparent"}}>The beauty of the game is strength stamina and technique and when you shorten the game, technique goes for a toss and the quality of badminton will surely go down in this system.</p>
           </div>
           <h1 className="sub-heading" style={{margin:"3vh auto"}}><span>Socials,</span></h1>
-          <div style={{display:"flex", justifyContent:"center", gap:"9~vw", marginTop:"5%", backgroundColor:"black"}}>
+          <div style={{display:"flex", justifyContent:"center", gap:"9vw", marginTop:"5%", backgroundColor:"black"}}>
             <Link to={"https://www.linkedin.com/in/chandan-sm-a7507a256"} target="_blank">
               <FaLinkedin className="login" style={{ backgroundColor: "black", color:"white" }} />
             </Link>
