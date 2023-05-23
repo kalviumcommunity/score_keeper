@@ -833,6 +833,9 @@ input{
   .logo-text2{
     display: flex !important;
   }
+  .newsletter{
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 650px) and (max-width: 1000px){

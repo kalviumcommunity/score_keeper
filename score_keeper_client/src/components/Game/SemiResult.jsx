@@ -66,7 +66,7 @@ function SemiResult() {
  
 // Displaying results to console
 .then(json => console.log(json));
-    window.location.href="/gamepage";
+    window.location.href="/game";
   }
 
   return (
