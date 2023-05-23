@@ -636,6 +636,121 @@ input{
 	cursor: pointer;
 }
 
+.shop{
+  padding: 13vh 5vh 5vh 5vh;
+  color: white;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3vw;
+  width: 100%;
+}
+
+.card{
+  border-radius: 20px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  height: fit-content;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 15px #000, 0px 0px 55px #858585;
+}
+
+.card-img{
+  height: 30vh;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-content{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-top{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-component-middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.product-name{
+  color: white;
+  font-size: large;
+  margin: 2%;
+  width: 70%;
+}
+
+.rating{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  color: white;
+}
+
+.product-rating{
+  font-size: x-large;
+  margin: 0%;
+}
+
+.product-ratings{
+  font-size: x-small;
+  margin: 0%;
+}
+
+.price-url{
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 3% 0% 0%;
+}
+
+.product-price{
+  font-size: x-large;
+  margin: 2%;
+  color: #f9004d;
+  margin-top: 1vh;
+}
+
+.url{
+  width: 7vw;
+  margin-top: 1vh;
+  padding: 1%;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.url:hover{
+  background-color: green;
+  color: black;
+}
+
+.product-decription{
+  font-size: small;
+  margin: 0%;
+  text-align: justify;
+  padding: 2%;
+  color: #fcfc;
+}
 
 @media screen and (max-width: 650px) {
   .navbar{
