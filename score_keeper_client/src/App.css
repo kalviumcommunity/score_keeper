@@ -639,6 +639,33 @@ input{
 .shop{
   padding: 13vh 5vh 5vh 5vh;
   color: white;
+  border-bottom: 3px solid white;
+}
+
+.hero-nav{
+  position: fixed;
+  background-color: black;
+  height: 7vh;
+  border-radius: 0px 0px 20px 20px;
+  width: 94%;
+  margin: auto;
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-heading{
+  color: #f9004d;
+  text-shadow: .5px .1px 0px white, 0px 0px 35px black;
+}
+
+.page-heading{
+  margin-top: 11vh;
+}
+
+.filter{
+  display: none;
 }
 
 .contents {
@@ -660,7 +687,7 @@ input{
 }
 
 .card:hover{
-  box-shadow: 0px 0px 15px #000, 0px 0px 55px #858585;
+  box-shadow: 0px 0px 15px #000, 0px 0px 25px #858585;
 }
 
 .card-img{
@@ -730,7 +757,7 @@ input{
 }
 
 .url{
-  width: 7vw;
+  width: 40%;
   margin-top: 1vh;
   padding: 1%;
   color: white;
@@ -1051,4 +1078,103 @@ input{
 .Spline{
   height:100vh;
   width: 100vw;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1000px){
+  .contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 100%;
+  }
+  .url{
+    width: 40%;
+  }
+  .hero-nav{
+    display: none;
+  }
+  .hero-nav-mob{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid white;
+    height: 25vh;
+    width: 20vw;
+    left: 68vw;
+    top: 22vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* visibility: hidden; */
+  }
+  .page-heading{
+    margin-top: 3vh;
+  }
+  .page-heading-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px){
+
+  .contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3vw;
+    width: 100%;
+  }
+  .navbar{
+    justify-content: space-between;
+  }
+  .nav-contents-div{
+    display: none;
+  }
+  .logo-div{
+    width: 30%;
+  }
+  .login-div{
+    width: 40%;
+  }
+  .url{
+    width: 40%;
+  }
+  .hero-nav{
+    display: none;
+  }
+  .hero-nav-mob{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid white;
+    height: 25vh;
+    width: 40vw;
+    left: 48vw;
+    top: 22vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* visibility: hidden; */
+  }
+  .page-heading{
+    margin-top: 3vh;
+  }
+  .page-heading-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter{
+    display: block;
+  }
 }
