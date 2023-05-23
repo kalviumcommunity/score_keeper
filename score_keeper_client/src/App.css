@@ -1051,6 +1051,9 @@ input{
   .news-img{
     width: 100% !important;
   }
+  .newsletter{
+    display: none !important;
+  }
 }
 
 .title{
