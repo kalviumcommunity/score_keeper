@@ -17,7 +17,11 @@ import CookiePolicy from './components/CookiePolicy'
 import AccessibilityPolicy from './components/AccessibilityPolicy'
 import FAQ from './components/FAQ'
 // import UpComing from './components/UpComing'
-import Shop from './components/Shop'
+import AllProducts from './components/Shop/AllProducts'
+import Shuttels from './components/Shop/Shuttels'
+import Racquets from './components/Shop/Racquets'
+import Grips from './components/Shop/Grips'
+import Shoes from './components/Shop/Shoes'
 import "./App.css"
 
 function App() {
@@ -39,7 +43,11 @@ function App() {
         <Route path='/cookiepolicy' element={<CookiePolicy />}/>
         <Route path='/accessibilitypolicy' element={<AccessibilityPolicy />}/>
         <Route path='/faq' element={<FAQ />}/>
-        <Route path='/shop' element={<Shop />}/>
+        <Route path='/shop' element={<AllProducts />}/>
+        <Route path='/shop/shuttels' element={<Shuttels />}/>
+        <Route path='/shop/racquets' element={<Racquets />}/>
+        <Route path='/shop/grips' element={<Grips />}/>
+        <Route path='/shop/shoes' element={<Shoes />}/>
         <Route path='*' element={<ErrorPage />}/>
 
       </Routes>

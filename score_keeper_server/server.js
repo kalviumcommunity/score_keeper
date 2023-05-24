@@ -176,7 +176,6 @@ app.get("/productData", async (req, res) => {
 
 app.get("/productData/:category", (req, res) => {
   const { category } = req.params;
-  console.log(req.params);
   ProductData
     .find({ category })
     .then((data) => res.json(data))

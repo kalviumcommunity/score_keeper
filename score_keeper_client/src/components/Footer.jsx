@@ -6,7 +6,7 @@ import fevicon from './Pictures/Logo.png'
 function Footer() {
   return (
     <div style={{zIndex:"2"}}>
-      <footer style={{display:"flex", flexDirection:"column", marginTop:"", justifyContent:"center", alignItems:"center", backgroundColor:"black"}}>
+      <footer style={{display:"flex", flexDirection:"column", marginTop:"", justifyContent:"center", alignItems:"center", backgroundColor:"black", padding:"1%"}}>
         <div className="footer" style={{backgroundColor:"black",display:"flex",flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
         <div className="logo-footer" style={{width:"50%", backgroundColor:"black"}}>
           <div className="logo-text" style={{backgroundColor:"black",display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
