@@ -67,7 +67,7 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 ## 
 | Content |
 | ------- |
-| **Back-end** |
+| ****Back-end**** |
 | NodeJs - setting up a project with package.json |
 | NodeJS Modules |
 | fs Module |
@@ -80,8 +80,7 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 | Template Engines |
 | Partials |
 | Middlewares |
-
-| **Databases** |
+| ****Databases**** |
 | MongoDB - Installations and Basics |
 | Mongoose |
 | CRUD Operations |
@@ -89,8 +88,7 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 | Schemas and Models |
 | Indexes |
 | Aggregations |
-
-| **Front-end and Full Stack** |
+| ****Front-end and Full Stack**** |
 | Low-fid design for your application |
 | High-fid design for your application |
 | ReactJS app initialization |
@@ -102,8 +100,7 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 | Postman Use for Testing |
 | Authentication |
 | Deployment |
-
-| **Extra Topics** |
+| ****Extra Topics**** |
 | dotenv |
 | Google OAuth |
 | React Router |
