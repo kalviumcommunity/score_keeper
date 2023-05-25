@@ -10,7 +10,7 @@
 ## Description
 Score Keeper is a user-friendly web application that provides raferee or who so ever is watching a live Badminton match can record scores of that match and save it on our own website and later come and view the scores of it. Basically Score Keeper is a website completely about Badminton made for Badminton lovers.
 
-With Score Keeper, people can view live news regarding sports and badminton in the news section of the website. People can even purchase badminton related products in the shop section which takes them to the same product on amazon, which is an affliate link which helps me earn money through `[Amazon Affiliate](https://affiliate-program.amazon.in/)`.   
+With Score Keeper, people can view live news regarding sports and badminton in the news section of the website. People can even purchase badminton related products in the shop section which takes them to the same product on amazon, which is an affliate link which helps me earn money through [Amazon Affiliate](https://affiliate-program.amazon.in/) .   
 
 What problem does it solve?
 
