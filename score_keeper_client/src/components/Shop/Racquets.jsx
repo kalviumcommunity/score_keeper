@@ -13,7 +13,7 @@ function AllProducts() {
     useEffect(() => {
 
         function handleClickOutside() {
-            setAlert(false);
+            setAlert(true);
         }
     
         document.addEventListener("mousedown", handleClickOutside);
@@ -54,7 +54,7 @@ function AllProducts() {
             <>
             <div className='page-heading-div'>
                 <h1 className='page-heading'>Racquets :</h1>
-                <FaFilter className='filter' style={{width:"10vw", height:"3vh", marginTop:"1vh"}} onClick={() => setAlert(!alert)}/>
+                <FaFilter className='filter' style={{width:"10vw", height:"3vh", marginTop:"1vh"}} onClick={() => setAlert(alert)}/>
                 {alert && (
                 <div className="hero-nav-mob">
                     <Link className='nav-heading' to={"/shop"}>All Products</Link>
