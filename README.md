@@ -1,4 +1,4 @@
-## Score Keeper
+# Score Keeper
 
 ### Project URLs
 👉 [Application URL](https://score-keper.netlify.app)  
@@ -10,7 +10,11 @@
 ## Description
 Score Keeper is a user-friendly web application that provides raferee or who so ever is watching a live Badminton match can record scores of that match and save it on our own website and later come and view the scores of it. Basically Score Keeper is a website completely about Badminton made for Badminton lovers.
 
+![Loading ..](https://res.cloudinary.com/dmewxwr0i/image/upload/c_crop,h_100,r_13,w_1271,x_0,y_0/v1685005715/Screenshot_2023-05-25_at_2.24.23_PM_ilnzf7.png)
+
 With Score Keeper, people can view live news regarding sports and badminton in the news section of the website. People can even purchase badminton related products in the shop section which takes them to the same product on amazon, which is an affliate link which helps me earn money through [Amazon Affiliate](https://affiliate-program.amazon.in/) .   
+
+<img src="https://res.cloudinary.com/dmewxwr0i/image/upload/r_26/v1685007338/Screenshot_2023-05-25_at_3.04.42_PM_lnue1k.png">
 
 What problem does it solve?
 
@@ -61,47 +65,6 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 
 7. Open your web browser and go to `http://localhost:3000` to view the app.
 
+## Project Walk Through
 
-## 
-| Content |
-| ------- |
-| ****Back-end**** |
-| NodeJs - setting up a project with package.json |
-| NodeJS Modules |
-| fs Module |
-| Streams and Buffers |
-| NPM |
-| Nodemon |
-| Events in Nodejs |
-| Express JS - first route |
-| ExpressJS - additional routes |
-| Template Engines |
-| Partials |
-| Middlewares |
-| ****Databases**** |
-| MongoDB - Installations and Basics |
-| Mongoose |
-| CRUD Operations |
-| Simple API - CRUD Operations using NodeJs |
-| Schemas and Models |
-| Indexes |
-| Aggregations |
-| ****Front-end and Full Stack**** |
-| Low-fid design for your application |
-| High-fid design for your application |
-| ReactJS app initialization |
-| Application components created |
-| Application deployed |
-| IDE Setup |
-| NodeJs REPL |
-| Using the public folder to serve files |
-| Postman Use for Testing |
-| Authentication |
-| Deployment |
-| ****Extra Topics**** |
-| dotenv |
-| Google OAuth |
-| React Router |
-| Material UI |
-| ThreeJS |
-| Spline |
+<img src="https://res.cloudinary.com/dmewxwr0i/video/upload/q_100/v1685011441/Walk_Through_oj62f0.gif">
