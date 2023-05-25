@@ -65,6 +65,7 @@ As I am a Badminton Player I noticed that people use pen and paper to record liv
 
 7. Open your web browser and go to `http://localhost:3000` to view the app.
 
+
 ## Project Walk Through
 
-<img src="https://res.cloudinary.com/dmewxwr0i/video/upload/q_100/v1685011441/Walk_Through_oj62f0.gif">
+![Loading ..](https://res.cloudinary.com/dmewxwr0i/image/upload/v1685012503/ezgif.com-video-to-gif_cinlf9.gif)
