@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Score Keeper
+<img width='80%' src='https://res.cloudinary.com/dmewxwr0i/image/upload/r_30/v1685005716/Screenshot_2023-05-25_at_2.27.11_PM_nxfd8x.png'>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Description
+<p align='justify'> Score Keeper is a user-friendly web application that provides raferee or who so ever is watching a live Badminton match can record scores of that match and save it on our own website and later come and view the scores of it. Basically Score Keeper is a website completely about Badminton made for Badminton lovers. </p>
 
-## Available Scripts
+<p align='justify'> With Score Keeper, people can view live news regarding sports and badminton in the news section of the website. People can even purchase badminton related products in the shop section which takes them to the same product on amazon, which is an affliate link which helps me earn money through Amazon Affiliate .</p>
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+### - Record Live Badminton Game
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <img width='50%' src="https://res.cloudinary.com/dmewxwr0i/image/upload/r_26/v1685079376/Screenshot_2023-05-26_at_11.05.31_AM_karppj.png">
+  
+### - Get Latest News Update
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <img width='50%' src="https://res.cloudinary.com/dmewxwr0i/image/upload/r_26/v1685005716/Screenshot_2023-05-25_at_2.25.09_PM_qsun4t.png">
+  
+### - Shop Products related to Badminton.
 
-### `npm test`
+  <img width='50%' src="https://res.cloudinary.com/dmewxwr0i/image/upload/r_26/v1685007338/Screenshot_2023-05-25_at_3.04.42_PM_lnue1k.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Technologies
 
-### `npm run build`
+- `MongoDB:` NoSQL database for storing data.
+- `Express:` Backend web application framework.
+- `React:` JavaScript library for building user interfaces.
+- `Node.js:` JavaScript runtime environment for executing server-side code.
+- `MUI:` Styling Library.
+- `Three.js:` 3D modal framework.
+- `Spline:` 3D modal displaying framework.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone the repository: git clone:
+```
+https://github.com/Chandan-Gowda-Kalvium/Score_Keeper.git
+```
+- Change to the project directory:
+```
+cd score-keeper-client
+```
+- Install dependencies:
+```
+npm i
+```
+- Start Server:
+```
+npm start
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contact
+#### For any questions or inquiries, please contact `Chandan-Gowda-Kalvium`.
