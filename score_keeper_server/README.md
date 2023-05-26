@@ -1,56 +1,47 @@
-Project Name
-This is a backend project built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+# Score Keeper
 
-Description
-This project serves as the backend component for a web application. It provides the necessary API endpoints and handles the server-side logic for data storage, retrieval, and manipulation.
+#### This is a backend project built with the MERN stack `MongoDB` , `Express.js` , `React.js` , `Node.js`.
 
-Features
-API endpoints for CRUD operations on data entities
-Authentication and authorization using JSON Web Tokens (JWT)
-Data validation and error handling
-Integration with MongoDB for data storage
-Prerequisites
-Node.js and npm should be installed on your machine.
-Installation
-Clone the repository:
-shell
-Copy code
-git clone <repository-url>
-Change to the project directory:
-shell
-Copy code
-cd project-directory
-Install the dependencies:
-shell
-Copy code
-npm install
-Set up environment variables:
-Create a .env file in the root directory of the project and provide the necessary environment variables. These may include the MongoDB connection string, JWT secret key, etc.
+## Description
+This project serves as the backend component for Score Keeper. It provides the necessary API endpoints and handles the server-side logic for `data storage`, `retrieval`, and `manipulation`.
 
-Start the server:
-shell
-Copy code
-npm start
-The server will start running on the specified port, and you should see a message indicating that the server is running successfully.
+## Features
+- API endpoints for CRUD operations on data entities. <br>
+- Authentication and authorization using Auth0 Web Tokens. <br>
+- Data validation and error handling. <br>
+- Integration with MongoDB for data storage. <br>
+- Prerequisites. <br>
+- Set up environment variables: <br><br>
+Create a `.env` file in the root directory of the project and provide the necessary environment variables. These may include the `MongoDB` connection string, `Auth0` secret key, etc.<br><br>
 
-API Documentation
-Document the available API endpoints and their functionalities here. Include details such as request/response formats, required headers or parameters, and any authentication or authorization requirements.
+## API Documentation
 
-Technologies Used
-MongoDB: A document-based NoSQL database used for data storage.
-Express.js: A fast and minimalist web application framework for Node.js used to build the server.
-React.js: A JavaScript library used for building user interfaces.
-Node.js: A JavaScript runtime environment used to run server-side code.
-Contributing
-If you would like to contribute to this project, please follow these steps:
+#### The Actual Link to the API Documentation lies [here..](https://documenter.getpostman.com/view/25693870/2s93m622Rg)
 
-Fork the repository
-Create a new branch for your feature or bug fix
-Make the necessary changes and commit them
-Push your changes to your forked repository
-Submit a pull request to the original repository
-License
-This project is licensed under the MIT License.
+`api/submitGameData`:- End Point to Save the Game to Database <br>
 
-Contact
-For any questions or inquiries, please contact Your Name.
+`api/getAllGameData`:- End Point to Get all the saved games from Database <br>
+
+`api/news`:- End Point to get all the new data from the Database. <br>
+
+`api/productData`:- End Point to get all the Shopping Product data from Database. <br><br>
+
+## Technologies Used
+- `MongoDB:` A document-based NoSQL database used for data storage.
+- `Express.js:` A fast and minimalist web application framework for Node.js used to build the server.
+- `React.js:` A JavaScript library used for building user interfaces.
+- `Node.js:` A JavaScript runtime environment used to run server-side code.
+<br>
+
+# Contributing
+### If you would like to contribute to this project, please follow these steps:
+
+#### - Fork the repository
+#### - Create a new branch for your feature or bug fix
+#### - Make the necessary changes and commit them
+#### - Push your changes to your forked repository
+#### - Submit a pull request to the original repository
+<br>
+
+# Contact
+#### For any questions or inquiries, please contact `Chandan-Gowda-Kalvium`.
