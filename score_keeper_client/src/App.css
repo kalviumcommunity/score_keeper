@@ -779,6 +779,10 @@ input{
   color: #fcfc;
 }
 
+.hero-nav-mob{
+  display: none;
+}
+
 @media screen and (max-width: 650px) {
   .navbar{
     height: 11vh;
