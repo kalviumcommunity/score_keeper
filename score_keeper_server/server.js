@@ -6,7 +6,8 @@ const GameData=require("./modals/modal")
 require("dotenv").config();
 const ProductData=require("./modals/productData")
 const News = require("./modals/news");
-
+const cron = require('node-cron');
+const axios = require('axios');
 
 // Create an Express app
 const app = express(
@@ -106,31 +107,55 @@ app.delete("/singleGameData/:id", async (req, res) => {
   res.status(200).json(gameData)
 })
 
-app.post("/news", async (req, res) => {
-  try {
-    // Extract news data from the request body
-    const { author, title, description, url, urlToImage, publishedAt, content } = req.body;
+////////////////////  CRON JOB  ///////////////////////
 
-    const newsSchema = new News({
-      author,
-      title,
-      description,
-      url,
-      urlToImage,
-      publishedAt,
-      content
+// API credentials and endpoint
+const API_KEY = 'b0a74c4e4aa344608bad726df4baa0cc';
+const URL = 'https://newsapi.org/v2/everything';
+
+// Function to fetch and store news data
+const fetchAndStoreNewsData = async () => {
+  try {
+    const response = await axios.get(URL, {
+      params: {
+        q: 'badminton',
+        from: '2023-05-02',
+        sortBy: 'publishedAt',
+        apiKey: API_KEY,
+      },
     });
 
-    // Save the news data to the database
-    await newsSchema.save();
+    const newsData = response.data.articles;
 
-    // Send a success response
-    res.status(200).send("News data saved successfully");
-  } catch (err) {
-    // Send an error response if something went wrong
-    res.status(500).send("Error saving news data: " + err.message);
+    // Clear existing data in the collection before uploading new data
+    await News.deleteMany();
+
+    // Insert fetched news data into the database
+    await News.insertMany(newsData);
+
+    console.log('News data uploaded to the database.');
+  } catch (error) {
+    console.error('Error fetching news data:', error);
   }
-});
+};
+
+// Function to fetch news data from the database
+const fetchNewsDataFromDatabase = async () => {
+  try {
+    const newNewsData = await News.find().lean();
+    console.log('News data fetched from the database:');
+  } catch (error) {
+    console.error('Error fetching news data from the database:', error);
+  }
+};
+
+// Schedule the task to fetch and store news data every night at 12 am
+cron.schedule('0 0 * * *', fetchAndStoreNewsData);
+
+// Fetch news data from the database immediately
+fetchNewsDataFromDatabase();
+
+////////////////////  CRON JOB ENDS  ///////////////////////
 
 app.get("/news", async (req, res) => {
   const newsData = await News.find()
