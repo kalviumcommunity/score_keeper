@@ -794,6 +794,7 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: fit-content;
   }
   .picture{
     width: 100%;
@@ -1152,6 +1153,9 @@ input{
   }
   .url{
     width: 40%;
+  }
+  .home{
+    height: fit-content;
   }
   .hero-nav{
     display: none;
