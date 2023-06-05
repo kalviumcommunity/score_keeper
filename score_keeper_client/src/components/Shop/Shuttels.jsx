@@ -38,11 +38,11 @@ function AllProducts() {
   return (
     <div className='shop'>
         <div className="hero-nav">
-           <Link className='nav-heading' to={"/shop"}>All Products</Link>
-           <Link className='nav-heading' to={"/shop/shuttels"}>Shuttels</Link>
-           <Link className='nav-heading' to={"/shop/racquets"}>Racquets</Link>
-           <Link className='nav-heading' to={"/shop/grips"}>Grips</Link> 
-           <Link className='nav-heading' to={"/shop/shoes"}>Shoes</Link> 
+           <Link className='nav-heading' onClick={() => window.scrollTo(0, 0)} to={"/shop"}>All Products</Link>
+           <Link className='nav-heading' onClick={() => window.scrollTo(0, 0)} to={"/shop/shuttels"}>Shuttels</Link>
+           <Link className='nav-heading' onClick={() => window.scrollTo(0, 0)} to={"/shop/racquets"}>Racquets</Link>
+           <Link className='nav-heading' onClick={() => window.scrollTo(0, 0)} to={"/shop/grips"}>Grips</Link> 
+           <Link className='nav-heading' onClick={() => window.scrollTo(0, 0)} to={"/shop/shoes"}>Shoes</Link> 
         </div>
         <div>
         {loading?(
