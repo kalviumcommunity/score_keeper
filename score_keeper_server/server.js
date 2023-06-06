@@ -145,7 +145,6 @@ const fetchAndStoreNewsData = async () => {
     const response = await axios.get(URL, {
       params: {
         q: 'badminton',
-        from: '2023-06-02',
         sortBy: 'publishedAt',
         apiKey: API_KEY,
       },
