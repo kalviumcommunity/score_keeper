@@ -16,7 +16,6 @@ import TermsConditions from './components/Terms&Conditions'
 import CookiePolicy from './components/CookiePolicy'
 import AccessibilityPolicy from './components/AccessibilityPolicy'
 import FAQ from './components/FAQ'
-// import UpComing from './components/UpComing'
 import AllProducts from './components/Shop/AllProducts'
 import Shuttels from './components/Shop/Shuttels'
 import Racquets from './components/Shop/Racquets'
@@ -27,7 +26,6 @@ import "./App.css"
 function App() {
   return (
     <>
-      {/* <NavBar /> */}
       <ResponsiveAppBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
