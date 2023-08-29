@@ -24,9 +24,6 @@ const app = express(
   credentials: true}}
 );
 
-app.use(cors());
-app.use(express.json());
-
 app.use((req, res, next) => {
   const referringDomain = req.get('Referer');
   const allowedDomain = 'https://score-keper.netlify.app';
@@ -38,6 +35,8 @@ app.use((req, res, next) => {
   }
 });
 
+app.use(cors());
+app.use(express.json());
 
 mongoose.set("strictQuery", false);
 
