@@ -595,6 +595,22 @@ input{
   text-shadow: solid #181818;
   text-shadow: #181818;
   height: 6vh;
+  font-size: xx-large;
+  width: 50%;
+}
+.old-gamepage-heading-l{
+  background-color: transparent;
+  color: #f9004d;
+  text-shadow: solid #181818;
+  text-shadow: #181818;
+  height: 6vh;
+  width: 50%;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.old-gamepage-heading-l:hover{
+  color: black;
+  font-weight: 700 !important;
 }
 
 .old-gamepage-data{
@@ -783,9 +799,73 @@ input{
   display: none;
 }
 
+.leaderboard{
+  height: 100vh;
+  padding-top: 12vh;
+}
+.lbpage-data{
+  width: 90%;
+  height: 65vh;
+  padding: 5%;
+  border-radius: 30px;
+  overflow-y: scroll;
+}
+.lbpage-dataa{
+  width: 90%;
+  height: 30vh;
+  padding: 5%;
+  border-radius: 30px;
+  overflow-y: scroll;
+}
+.lbpage-heading{
+  background-color: transparent;
+  color: #f9004d;
+  text-shadow: solid #181818;
+  text-align: center;
+  font-size: x-large;
+}
+.lbpage-content{
+  background-color: transparent;
+  color: white;
+  text-shadow: solid #181818;
+  text-align: center;
+  font-size: large;
+}
+.old-gamepage-heading-head{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30vw;
+  height: 10vh;
+  background-color: transparent;
+}
+
 @media screen and (max-width: 650px) {
   .navbar{
     height: 11vh;
+  }
+  .old-gamepage-heading-head{
+    margin: auto;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+  }
+  .old-gamepage-heading{
+    width: 40vw;
+    text-align: center;
+    height: fit-content;
+  }
+  .old-gamepage-heading-l{
+    width: 40vw;
+    text-align: center;
+    height: fit-content;
+  }
+  .lbpage-heading{
+    font-size: medium;
+  }
+  .lbpage-content{
+    font-size: medium;
   }
   .logo{
     height: 9vh;
@@ -937,10 +1017,6 @@ input{
     margin-top: 13vh;
     border-radius: 50px;
     height: 83vh;
-  }
-  .old-gamepage-heading{
-    height: 4vh;
-    margin-top: 1vh;
   }
   .old-gamepage-data{
     width: 85vw;

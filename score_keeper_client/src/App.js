@@ -21,6 +21,7 @@ import Shuttels from './components/Shop/Shuttels'
 import Racquets from './components/Shop/Racquets'
 import Grips from './components/Shop/Grips'
 import Shoes from './components/Shop/Shoes'
+import LeaderBoard from './components/Game/LeaderBoard'
 import "./App.css"
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/game' element={<GamePage/>}/>
         <Route path='/newgame21' element={<NewGame/>}/>
         <Route path='/oldgames' element={<OldGame/>}/>
+        <Route path="/leaderboard" element={<LeaderBoard/>}/>
         <Route path='/semiresult' element={<SemiResult />}/>
         <Route path='/rules' element={<Rules />}/>
         <Route path='/about' element={<About />}/>
