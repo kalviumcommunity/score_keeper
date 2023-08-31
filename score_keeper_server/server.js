@@ -136,7 +136,6 @@ app.post("/news", async (req, res) => {
 ////////////////////  CRON JOB  ///////////////////////
 
 // API credentials and endpoint
-const API_KEY = 'b0a74c4e4aa344608bad726df4baa0cc';
 const URL = 'https://newsapi.org/v2/everything';
 
 // Function to fetch and store news data
@@ -146,7 +145,7 @@ const fetchAndStoreNewsData = async () => {
       params: {
         q: 'badminton',
         sortBy: 'publishedAt',
-        apiKey: API_KEY,
+        apiKey: process.env.API_KEY,
       },
     });
 
