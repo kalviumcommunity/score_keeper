@@ -8,32 +8,14 @@ const ProductData=require("./modals/productData")
 const News = require("./modals/news");
 const cron = require('node-cron');
 const axios = require('axios');
-const whitelist = ['https://score-keper.netlify.app'];
 
 // Create an Express app
 const app = express(
-  {cors:{origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  {cors:{origin:"*",
   methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type"],
   credentials: true}}
 );
-
-app.use((req, res, next) => {
-  const referringDomain = req.get('Referer');
-  const allowedDomain = 'https://score-keper.netlify.app';
-
-  if (referringDomain && referringDomain.startsWith(allowedDomain)) {
-    next();
-  } else {
-    res.status(403).send('Unauthorized');
-  }
-});
 
 app.use(cors());
 app.use(express.json());
