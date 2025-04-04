@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom"
 import loai from "../Pictures/Loaing.gif"
 import LoginButton from "../Login/LoginButton";
 
@@ -33,8 +34,10 @@ function OldGame() {
           <img className="pic" src='https://res.cloudinary.com/dmewxwr0i/image/upload/v1684125179/pngegg.61e13af42a8dafef9817_bjry7s.png' alt="react-app" />
         </div>
         <div className="old-gamepage-content">
-          <h1 className="old-gamepage-heading">Played Games</h1>
-
+          <div className="old-gamepage-heading-head">
+            <h1 className="old-gamepage-heading">Played Games</h1>
+            <Link to={"/leaderboard"} className="old-gamepage-heading-l" style={{fontWeight:"300"}}>Leader Board</Link>
+          </div>
           <div className="old-gamepage-data">
             {isAuthenticated?(
               <>
