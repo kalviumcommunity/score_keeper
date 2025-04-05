@@ -59,7 +59,7 @@ export default function Home({ navigation }: { navigation: NavigationProp<any> }
                 <Text style={styles.heading}>
                     <Text style={styles.highlight}>Welcome {`${user?.name}`}</Text>
                 </Text>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NewGame')}>
                     <Text style={styles.buttonText}>New Game</Text>
                 </TouchableOpacity>
                 {/* Start Button */}
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     imageContainer: {
-        height: '75%',
-        paddingTop: '35%',
+        height: '70%',
+        paddingTop: '30%',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         gap: 20,
     },
     heading: {
-        fontSize: 19,
+        fontSize: 29,
         fontWeight: 'bold',
         color: 'white',
         marginBottom: 10,

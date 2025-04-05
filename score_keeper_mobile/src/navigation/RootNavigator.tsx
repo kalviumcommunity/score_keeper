@@ -4,6 +4,8 @@ import LandingPage from '../screens/LandingPage/LandingPage';
 import Home from '../screens/Home/Home';
 import PlayedGamesScreen from '../screens/PlayedGames/PlayedGames';
 import { useAuth0 } from 'react-native-auth0';
+import SemiResult from '../screens/NewGame/SemiResult';
+import PlayNewGame from '../screens/NewGame/NewGame';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,8 @@ export default function RootNavigator() {
       <Stack.Screen name="LandingPage" component={LandingPage} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="PlayedGames" component={PlayedGamesScreen} />
+      <Stack.Screen name="SemiResult" component={SemiResult} />
+      <Stack.Screen name="NewGame" component={PlayNewGame} />
     </Stack.Navigator>
   );
 }

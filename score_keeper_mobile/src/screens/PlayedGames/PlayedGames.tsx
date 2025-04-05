@@ -1,3 +1,4 @@
+import { NavigationProp, CommonActions } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import {
   View,
@@ -6,17 +7,39 @@ import {
   FlatList,
   ActivityIndicator,
   Image,
+  BackHandler,
 } from 'react-native';
 import { useAuth0 } from 'react-native-auth0';
 
-export default function PlayedGamesScreen() {
+export default function PlayedGamesScreen({ navigation }: { navigation: NavigationProp<any> }) {
   const [games, setGames] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth0();
 
   useEffect(() => {
+    // Disable back gesture and set custom back handling
+    navigation.setOptions({
+      headerLeft: () => null,
+      gestureEnabled: false,
+    });
+
+    // Handle hardware back button
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: 'Home' }],
+        })
+      );
+      return true;
+    });
+
+    return () => backHandler.remove();
+  }, [navigation]);
+
+  useEffect(() => {
     if (user) {
-      fetch(`${'your backend url'}/${user.sub}`)
+      fetch(`${'your backend api'}/${user.sub}`)
         .then((res) => res.json())
         .then((data) => {
           setGames(data.reverse());
