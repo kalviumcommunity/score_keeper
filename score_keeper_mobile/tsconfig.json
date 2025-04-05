@@ -1,0 +1,5 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "include": ["**/*"],
+  "exclude": ["node_modules", "node_modules/@react-native/typescript-config/**/Pods/**"]
+}
